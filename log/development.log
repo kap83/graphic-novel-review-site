@@ -1,0 +1,587 @@
+  [1m[35m (146.6ms)[0m  [1m[35mCREATE DATABASE "graphic_novel_review_site_development" ENCODING = 'unicode'[0m
+  [1m[35m (55.9ms)[0m  [1m[35mCREATE DATABASE "graphic_novel_review_site_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2023-08-17 13:05:01 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.1.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.1.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 637)
+Completed 200 OK in 21ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6857)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:05:07 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1812)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-08-17 13:05:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/hello" for ::1 at 2023-08-17 13:05:46 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:05:48 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:05:49 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 238)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:06:11 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:06:11 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 238)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:07:11 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:09:31 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 24ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 3261)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:09:34 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:09:37 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:09:42 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:09:44 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:15:06 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2023-08-17 13:15:06 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-08-17 13:18:37 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-17 13:18:37 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-08-17 13:19:39 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-17 13:19:40 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/hello" for ::1 at 2023-08-17 13:21:32 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 20ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 3261)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-08-17 13:21:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/hello" for ::1 at 2023-08-17 13:21:34 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:23:23 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:23:26 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:26:38 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:26:40 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:28:46 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:28:48 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:28:49 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:29:16 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:29:18 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:29:18 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:43:58 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:01 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:01 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:02 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:49 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:51 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:52 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:52 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:53 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:53 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:54 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/hello" for ::1 at 2023-08-17 13:44:55 -0400
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 324)
+
+
+Started GET "/hello" for 127.0.0.1 at 2023-08-17 13:58:22 -0400
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2996)
+
+
+Started GET "/hello" for 127.0.0.1 at 2023-08-17 13:58:22 -0400
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 495)
+
+
+Started GET "/hello" for 127.0.0.1 at 2023-08-17 13:58:25 -0400
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/hello" for 127.0.0.1 at 2023-08-17 13:58:25 -0400
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 409)
+
+
