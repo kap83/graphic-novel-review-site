@@ -1,18 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import './App.css';
+import Login from "./Login";
+
+//filter out password for current user so you're not sending the password all over the site. 
 
 function App() {
-  const [count, setCount] = useState(0);
+  
+  const [currentUser, setCurrentUser] = useState(null)
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  console.log("in apps", currentUser)
+
+
+  function onLogin(user) {
+    setCurrentUser(user)
+  }
+
 
   return (
     <div className="App">
-      <h1>Page Count: {count}</h1>
+      <Login onLogin={onLogin}/>
     </div>
   );
 }
