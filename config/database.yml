@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: graphic_novel_review_site_production
+  url: <%= ENV['DATABASE_URL'] %>
+  #database: graphic_novel_review_site_production
   username: graphic_novel_review_site
   password: <%= ENV["GRAPHIC_NOVEL_REVIEW_SITE_DATABASE_PASSWORD"] %>
