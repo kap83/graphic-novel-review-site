@@ -717,3 +717,1497 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 188ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1021)
 
 
+Started GET "/" for 127.0.0.1 at 2023-08-18 17:35:34 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-18 17:35:35 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-08-18 17:37:37 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-18 17:37:38 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-08-19 14:17:16 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-19 14:17:17 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-19 14:17:23 -0400
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.7) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.7) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.7) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.7) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.7) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2023-08-19 14:19:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.1.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.1.0/gems/railties-7.0.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 476)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3807)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-19 14:20:03 -0400
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"users"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-19 14:20:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/login" for 127.0.0.1 at 2023-08-19 14:20:13 -0400
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"login"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 62)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-08-19 14:20:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-08-19 14:30:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.6ms)
+Completed 201 Created in 232ms (Views: 4.3ms | ActiveRecord: 6.2ms | Allocations: 11116)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 14:49:34 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.73ms)
+Completed 201 Created in 231ms (Views: 2.1ms | ActiveRecord: 13.7ms | Allocations: 11907)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 14:51:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.81ms)
+Completed 201 Created in 225ms (Views: 2.0ms | ActiveRecord: 5.5ms | Allocations: 11138)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:02:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"amethystoracle", "password"=>"[FILTERED]", "session"=>{"username"=>"amethystoracle", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "amethystoracle"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.7ms)
+Completed 201 Created in 217ms (Views: 2.2ms | ActiveRecord: 5.1ms | Allocations: 11132)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:11:16 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.55ms)
+Completed 201 Created in 240ms (Views: 1.3ms | ActiveRecord: 7.6ms | Allocations: 4204)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:41:12 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.64ms)
+Completed 201 Created in 218ms (Views: 1.7ms | ActiveRecord: 7.9ms | Allocations: 7315)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:41:21 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.6ms)
+Completed 201 Created in 250ms (Views: 1.8ms | ActiveRecord: 15.0ms | Allocations: 7323)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:42:38 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.2ms)
+Completed 201 Created in 202ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 15:43:59 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.61ms)
+Completed 201 Created in 256ms (Views: 3.5ms | ActiveRecord: 11.2ms | Allocations: 7320)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 18:46:21 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"amethystoracle", "password"=>"[FILTERED]", "session"=>{"username"=>"amethystoracle", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "amethystoracle"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (4.91ms)
+Completed 201 Created in 316ms (Views: 9.7ms | ActiveRecord: 44.0ms | Allocations: 3885)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 18:47:00 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"amethystoracle", "password"=>"[FILTERED]", "session"=>{"username"=>"amethystoracle", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "amethystoracle"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (6.11ms)
+Completed 201 Created in 280ms (Views: 16.1ms | ActiveRecord: 10.3ms | Allocations: 3872)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:08:14 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:08:20 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:08:21 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:08:47 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:08:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:09:14 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:09:16 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:09:18 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:10:09 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:10:39 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:10:50 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:10:57 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:10:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:11:24 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:11:25 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:13:27 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:13:27 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:13:48 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:13:48 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/login" for 127.0.0.1 at 2023-08-19 19:14:21 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.39ms)
+Completed 201 Created in 227ms (Views: 3.4ms | ActiveRecord: 8.4ms | Allocations: 7367)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:14:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:14:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:15:02 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:15:02 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/login" for 127.0.0.1 at 2023-08-19 19:15:07 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.41ms)
+Completed 201 Created in 184ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 1037)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 19:15:08 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.2ms)
+Completed 201 Created in 196ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1031)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:15:10 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:20:42 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:20:42 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:15 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:15 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:30 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:30 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:32 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:21:32 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:22:45 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:22:45 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:23:25 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:23:25 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:25:28 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:25:28 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:33:00 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:33:47 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:33:48 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:33:51 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:33:52 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/login" for 127.0.0.1 at 2023-08-19 19:35:07 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.95ms)
+Completed 201 Created in 234ms (Views: 2.4ms | ActiveRecord: 19.7ms | Allocations: 4245)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-08-19 19:35:36 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.89ms)
+Completed 201 Created in 220ms (Views: 2.2ms | ActiveRecord: 5.9ms | Allocations: 3928)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:41:04 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:41:04 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:41:50 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:41:50 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:08 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:08 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:10 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:10 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:16 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:16 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:19 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:19 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:24 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:24 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:29 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:29 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:34 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:34 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:36 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:36 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:56 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:42:56 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:43:09 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:43:09 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:40 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:40 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:50 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:50 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:47:58 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:48:26 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:48:26 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:48:46 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:48:46 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 19:48:49 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:08:25 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:08:26 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/login" for 127.0.0.1 at 2023-08-19 20:09:13 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"spectralsongwrite", "password"=>"[FILTERED]", "session"=>{"username"=>"spectralsongwrite", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "spectralsongwrite"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.86ms)
+Completed 201 Created in 251ms (Views: 4.0ms | ActiveRecord: 14.0ms | Allocations: 3913)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:10:46 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:10:46 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:11:21 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/me" for 127.0.0.1 at 2023-08-19 20:11:52 -0400
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  

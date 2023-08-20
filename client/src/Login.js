@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { UserContext } from './Context/User'
 
-export default function Login({onLogin}) {
-      const [username, setUsername] = useState('')
+export default function Login() {
+
+      const {username, setUsername, setFirstName} = useContext(UserContext)
       const [password, setPassword] = useState('')
-   
+      const [error, setError] = useState(null)
+
       function handleSubmit(e) {
         e.preventDefault()
-        //console.log(username, password)
         const loginValues = {
           username: username,
           password: password
         }
-
 
         fetch('/login', {
           method: 'POST',
@@ -21,16 +22,23 @@ export default function Login({onLogin}) {
           body: JSON.stringify(loginValues)
         })
         .then(res=> res.json())
-        .then((user) => onLogin(user)) 
+        .then((user) => {
+          console.log(user)
+          setUsername(user.username)
+          setFirstName(user.first_name)
 
-
-
+        }) 
+        .catch(res=> setError(res.error))
       }
+
+      const displayError = error ? <i>{error}</i> : '';
+        
+
 
 
   return (
     <>
-      <h2>Login</h2>
+    <h2>Login</h2>
     <form onSubmit={handleSubmit}>
       <label>
         USERNAME:
@@ -49,10 +57,9 @@ export default function Login({onLogin}) {
           onChange={(e)=> setPassword(e.target.value)}
           />
       </label>
+      {displayError}
       <button type='submit'>LOGIN</button>
-
     </form>
-
     </>
   )
 }

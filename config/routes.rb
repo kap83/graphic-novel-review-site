@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   post "/login", to: "sessions#create"
-
+  get "/me", to: "user#show"
 
   # route to test your configuration
   get '/hello', to: 'application#hello_world'
