@@ -1,14 +1,13 @@
 import React, {useContext} from 'react'
 import { UserContext } from './Context/User'
 
+export default function Test() {
 
-export default function Profile() {
-  
-    const {firstName} = useContext(UserContext)
+  const {firstName} = useContext(UserContext)
 
   return (
     <div>
-      <h2>Hi {firstName}!</h2> 
+      <h2>Hi again, {firstName}!</h2> 
     </div>
   )
 }

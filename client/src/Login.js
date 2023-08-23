@@ -3,7 +3,9 @@ import { UserContext } from './Context/User'
 
 export default function Login() {
 
-      const {username, setUsername, setFirstName} = useContext(UserContext)
+      // eslint-disable-next-line
+      const {setLoggedIn, currentUser, setCurrentUser} = useContext(UserContext)
+      const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
       const [error, setError] = useState(null)
 
@@ -22,19 +24,24 @@ export default function Login() {
           body: JSON.stringify(loginValues)
         })
         .then(res=> res.json())
-        .then((user) => {
-          console.log(user)
-          setUsername(user.username)
-          setFirstName(user.first_name)
-
+        .then(
+          (data) => {
+            console.log(data)
+            if(data.username === username) {
+              setCurrentUser(data)
+              setLoggedIn(true)
+              setUsername('')
+              setPassword('')
+            } else {
+              setError(data.error.login)
+            }
         }) 
-        .catch(res=> setError(res.error))
       }
-
-      const displayError = error ? <i>{error}</i> : '';
-        
-
-
+      
+      // eslint-disable-next-line
+      const redirectToProfilePageAfterSignIn = currentUser ? <Login /> : null
+      const displayError = error ? <i>{error}</i> : null
+      
 
   return (
     <>
@@ -57,8 +64,9 @@ export default function Login() {
           onChange={(e)=> setPassword(e.target.value)}
           />
       </label>
-      {displayError}
       <button type='submit'>LOGIN</button>
+      <p>Click to Register</p>
+      {displayError}
     </form>
     </>
   )

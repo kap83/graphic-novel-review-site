@@ -4,28 +4,37 @@ import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
 
-  const {loggedIn} = useContext(UserContext)
+  // eslint-disable-next-line
+  const {loggedIn, handleLogout} = useContext(UserContext)
 
 const linkStyle = {
     color: "white"
 }
 
+
+
+
+
   return (
     <div className="navBar">
       <NavLink
-        to="/login"
+        to="/"
         style={linkStyle}
       >
         Login
       </NavLink>
-    {loggedIn && <NavLink
+    <NavLink
         to="/profile"
         style={linkStyle}
         >
           Profile
-      </NavLink>}
-      
-
+      </NavLink>
+      <NavLink
+        to="/test"
+          style={linkStyle}>
+            Test
+      </NavLink>
+    <button onClick={handleLogout}>LOGOUT</button>
     </div>
   )
 }

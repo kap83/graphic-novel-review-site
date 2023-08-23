@@ -3,38 +3,49 @@ import React, { useState, useEffect } from 'react';
 export const UserContext = React.createContext();
 
 export function UserProvider({ children }) {
-  const [username, setUsername] = useState('');
   // eslint-disable-next-line
   const [loggedIn, setLoggedIn] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState({});
+  const [notLoggedInError, setNotLoggedInError] = useState('')
+
 
   useEffect(()=> {
     fetch("/me").then(res=> {
       if (res.ok) {
         res.json()
-        .then(user => {
-          setCurrentUser(user)
+        .then(data => {
+          console.log("in user", data)
+          setCurrentUser(data)
           setLoggedIn(true)
         })
-        .catch(error => console.log(error))
+      } else {
+        res.json()
+        .then(data => {
+          setNotLoggedInError(data.error)
+        })
       }
     })
   }, [])
 
+  
+  function handleLogout() {
+    fetch("/logout", {
+      method: "DELETE"
+    })
+    .then(()=> {
+      setCurrentUser()
+      setLoggedIn(false)
+    })
+  }
 
   const userValue = {
-    username,
-    setUsername,
-    firstName,
-    setFirstName,
     currentUser,
     setCurrentUser,
     loggedIn,
-    setLoggedIn
+    handleLogout,
+    setLoggedIn,
+    notLoggedInError
   };
-
-
 
 
   return <UserContext.Provider value={userValue}>{children}</UserContext.Provider>;
