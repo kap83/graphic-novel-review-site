@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "/logout", to: "sessions#destroy"
 
+  post "/signup", to: "users#create"
+
 
   # route to test your configuration
  

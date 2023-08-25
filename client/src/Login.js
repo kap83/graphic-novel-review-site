@@ -1,13 +1,15 @@
 import React, {useState, useContext} from 'react'
-import { UserContext } from './Context/User'
+import { UserContext  } from './Context/User'
+import Profile from './Profile'
 
-export default function Login() {
+export default function Login({handleClick}) {
 
-      // eslint-disable-next-line
       const {setLoggedIn, currentUser, setCurrentUser} = useContext(UserContext)
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
       const [error, setError] = useState(null)
+    
+
 
       function handleSubmit(e) {
         e.preventDefault()
@@ -39,9 +41,10 @@ export default function Login() {
       }
       
       // eslint-disable-next-line
-      const redirectToProfilePageAfterSignIn = currentUser ? <Login /> : null
+      const redirectToProfilePageAfterSignIn = currentUser ? <Profile /> : null
       const displayError = error ? <i>{error}</i> : null
       
+
 
   return (
     <>
@@ -65,9 +68,9 @@ export default function Login() {
           />
       </label>
       <button type='submit'>LOGIN</button>
-      <p>Click to Register</p>
       {displayError}
     </form>
+    <button onClick={handleClick}>Click to Register</button>
     </>
   )
 }

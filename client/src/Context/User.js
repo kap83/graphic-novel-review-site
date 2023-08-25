@@ -14,7 +14,6 @@ export function UserProvider({ children }) {
       if (res.ok) {
         res.json()
         .then(data => {
-          console.log("in user", data)
           setCurrentUser(data)
           setLoggedIn(true)
         })
@@ -38,15 +37,15 @@ export function UserProvider({ children }) {
     })
   }
 
-  const userValue = {
+  const userValues = {
     currentUser,
     setCurrentUser,
     loggedIn,
     handleLogout,
     setLoggedIn,
     notLoggedInError
-  };
+  }
 
 
-  return <UserContext.Provider value={userValue}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={userValues}>{children}</UserContext.Provider>;
 }

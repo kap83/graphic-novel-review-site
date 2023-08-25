@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-
-
     #TO DO
         #WHEN THE USER DATA IS SENT BACK, DON'T SEND BACK PASSWORD DIGEST, UPDATED/CREATED AT
 
@@ -12,6 +10,21 @@ class UsersController < ApplicationController
             render json: {error: "Please sign in"}, status: :unauthorized
         end
     end
-    
+
+    def create 
+        user = User.create!(user_params)
+        if user.valid?
+            render json: user, status: :created 
+        else
+            render json: {errors: user.errors.full_message}, status: unprocessable_entity
+        end
+        
+    end
+
+    private
+
+    def user_params
+        params.permit(:username, :password, :password_confirmation, :first_name, :last_name)
+    end
 
 end

@@ -2,10 +2,11 @@ import './App.css'
 import React, {useContext} from 'react'
 import {Route, Routes} from 'react-router-dom'
 import { UserContext } from './Context/User';
-import Login from './Login';
 import NavBar from './NavBar';
 import Profile from './Profile'
 import Test from './Test';
+import LoginDisplay from './LoginDisplay';
+//import Register from './Register';
 
 function App() {
 
@@ -15,13 +16,14 @@ function App() {
     //write logic to redirect users who are not logged in
     
 
-  console.log("inApps", notLoggedInError)
+  //console.log("inApps", notLoggedInError)
 
+  //MAKE SURE ERROR MSG ONLY DISPLAYS ON LOGIN PAGE. TRY NESTED IF/ELSE
   if (!loggedIn) {
     return (
       <>
-        {notLoggedInError && <h2>{notLoggedInError}</h2>}
-        <Login />
+        {notLoggedInError && <h2>{notLoggedInError} </h2>}
+        <LoginDisplay /> 
       </>
     );
   }
@@ -30,9 +32,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path='/' element={<Login />} /> :
+        <Route path='/' element={<LoginDisplay />} /> :
         <Route path='/profile' element={<Profile />} /> 
         <Route path='/test' element={<Test />} /> 
+        {/* <Route path='register' element={<Register />} /> */}
       </Routes>
     </div>
   );
