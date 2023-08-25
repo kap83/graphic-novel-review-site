@@ -4,7 +4,7 @@ import Profile from './Profile'
 
 export default function Login({handleClick}) {
 
-      const {setLoggedIn, currentUser, setCurrentUser} = useContext(UserContext)
+      const {setLoggedIn, notLoggedInError, currentUser, setCurrentUser} = useContext(UserContext)
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
       const [error, setError] = useState(null)
@@ -47,30 +47,36 @@ export default function Login({handleClick}) {
 
 
   return (
-    <>
-    <h2>Login</h2>
+    <div className='login'>
+    <h1>{notLoggedInError}</h1>
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className='formLabelStyle'>
         USERNAME:
         <input 
+        style={{marginLeft: "1%"}}
         type='text' 
         value={username}
         onChange={(e)=> setUsername(e.target.value)}
         />
       </label>
+      <br />
+      <br />
       <label>
           PASSWORD:
           <input 
+          style={{marginLeft: "1%"}}
           type='password'
           placeholder='*********'
           value={password}
           onChange={(e)=> setPassword(e.target.value)}
           />
       </label>
-      <button type='submit'>LOGIN</button>
+      <br />
+      <button style={{marginLeft: "27%"}} type='submit'>LOGIN</button>
       {displayError}
+      <button style={{marginLeft: "1%"}} onClick={handleClick}>REGISTER</button>
     </form>
-    <button onClick={handleClick}>Click to Register</button>
-    </>
+    
+    </div>
   )
 }

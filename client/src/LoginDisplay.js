@@ -12,7 +12,7 @@ export default function LoginDisplay() {
 
 
   return (
-    <div>
+    <div className='display'>
        {click === false ?  <Login handleClick={handleClick} /> : <Register /> }
     </div>
   )

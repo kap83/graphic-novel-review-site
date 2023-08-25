@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         if user 
             render json: user
         else
-            render json: {error: "Please sign in"}, status: :unauthorized
+            render json: {error: "Please Sign In"}, status: :unauthorized
         end
     end
 

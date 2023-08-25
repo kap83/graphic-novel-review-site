@@ -10,7 +10,7 @@ import LoginDisplay from './LoginDisplay';
 
 function App() {
 
-  const {loggedIn, notLoggedInError} = useContext(UserContext)
+  const {loggedIn} = useContext(UserContext)
 
   //TODO
     //write logic to redirect users who are not logged in
@@ -22,7 +22,7 @@ function App() {
   if (!loggedIn) {
     return (
       <>
-        {notLoggedInError && <h2>{notLoggedInError} </h2>}
+        {/* {notLoggedInError && <h2>{notLoggedInError} </h2>} */}
         <LoginDisplay /> 
       </>
     );

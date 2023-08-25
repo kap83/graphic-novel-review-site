@@ -3,17 +3,11 @@ import { UserContext } from './Context/User'
 
 export default function Register() {
 
-    // eslint-disable-next-line
     const {setLoggedIn, currentUser, setCurrentUser} = useContext(UserContext)
-    // eslint-disable-next-line
     const [firstName, setFirstName] = useState('')
-    // eslint-disable-next-line
     const [lastName, setLastName] = useState('')
-    // eslint-disable-next-line
     const [username, setUsername] = useState('')
-    // eslint-disable-next-line
     const [password, setPassword] =useState('')
-    // eslint-disable-next-line
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
     const [error, setError] = useState(null)
 
@@ -27,8 +21,6 @@ export default function Register() {
             password: password,
             password_confirmation: passwordConfirmation
         }
-
-        console.log("in register", signupValues)
 
         fetch('/signup', {
             method: 'POST',
@@ -55,38 +47,48 @@ export default function Register() {
     const displayError = error ? <i>{error}</i> : null
 
   return (
-    <div>
+    <div className='register'>
       <form onSubmit={handleSubmit}>
-      <label>
+      <label style={{marginLeft: "25%"}}>
             FIRST NAME:
             <input 
+                style={{marginLeft: "25%"}}
                 type='text'
                 value={firstName}
                 required
                 onChange={(e) => setFirstName(e.target.value)}
             />
         </label>
-        <label>
+        <br />
+        <br />
+        <label style={{marginLeft: "25%"}}>
             LAST NAME:
             <input 
+                style={{marginLeft: "25%"}}
                 type='text'
                 value={lastName}
                 required
                 onChange={(e) => setLastName(e.target.value)}
             />
         </label>
-        <label>
+        <br />
+        <br />
+        <label style={{marginLeft: "25%"}}>
             USERNAME:
             <input 
+                style={{marginLeft: "25%"}}
                 type='text'
                 value={username}
                 required
                 onChange={(e) => setUsername(e.target.value)}
             />
         </label>
-        <label>
+        <br />
+        <br />
+        <label style={{marginLeft: "25%"}}>
             PASSWORD:
             <input 
+                style={{marginLeft: "25%"}}
                 type='text'
                 placeholder='*********'
                 value={password}
@@ -94,9 +96,12 @@ export default function Register() {
                 onChange={(e) => setPassword(e.target.value)}
             />
         </label>
-        <label>
-            CONFIRM PASSWORD: 
+        <br />
+        <br />
+        <label style={{marginLeft: "25%"}}>
+            RE-ENTER PASSWORD: 
             <input 
+                style={{marginLeft: "25%"}}
                 type='text'
                 placeholder='*********'
                 value={passwordConfirmation}
@@ -104,7 +109,8 @@ export default function Register() {
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
             />
         </label>
-        <button type='submit'>SUBMIT</button>
+        <br />
+        <button style={{marginLeft: "40%"}} type='submit'>SUBMIT</button>
         {displayError}
       </form>
     </div>
