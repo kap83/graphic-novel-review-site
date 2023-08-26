@@ -49,7 +49,7 @@ export default function Register() {
   return (
     <div className='register'>
       <form onSubmit={handleSubmit}>
-      <label style={{marginLeft: "25%"}}>
+      <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             FIRST NAME:
             <input 
                 style={{marginLeft: "25%"}}
@@ -61,7 +61,7 @@ export default function Register() {
         </label>
         <br />
         <br />
-        <label style={{marginLeft: "25%"}}>
+        <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             LAST NAME:
             <input 
                 style={{marginLeft: "25%"}}
@@ -73,7 +73,7 @@ export default function Register() {
         </label>
         <br />
         <br />
-        <label style={{marginLeft: "25%"}}>
+        <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             USERNAME:
             <input 
                 style={{marginLeft: "25%"}}
@@ -85,7 +85,7 @@ export default function Register() {
         </label>
         <br />
         <br />
-        <label style={{marginLeft: "25%"}}>
+        <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             PASSWORD:
             <input 
                 style={{marginLeft: "25%"}}
@@ -98,7 +98,7 @@ export default function Register() {
         </label>
         <br />
         <br />
-        <label style={{marginLeft: "25%"}}>
+        <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             RE-ENTER PASSWORD: 
             <input 
                 style={{marginLeft: "25%"}}

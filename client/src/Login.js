@@ -4,13 +4,15 @@ import Profile from './Profile'
 
 export default function Login({handleClick}) {
 
-      const {setLoggedIn, notLoggedInError, currentUser, setCurrentUser} = useContext(UserContext)
+      const {setLoggedIn, notLoggedInError, loggedIn, setCurrentUser} = useContext(UserContext)
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
       const [error, setError] = useState(null)
+
+      function redirectToProfilePageAfterSignIn() {
+        return loggedIn === true ? null : <Profile />
+      }
     
-
-
       function handleSubmit(e) {
         e.preventDefault()
         const loginValues = {
@@ -34,14 +36,14 @@ export default function Login({handleClick}) {
               setLoggedIn(true)
               setUsername('')
               setPassword('')
+              redirectToProfilePageAfterSignIn()
             } else {
               setError(data.error.login)
             }
         }) 
       }
       
-      // eslint-disable-next-line
-      const redirectToProfilePageAfterSignIn = currentUser ? <Profile /> : null
+      
       const displayError = error ? <i>{error}</i> : null
       
 
@@ -50,7 +52,7 @@ export default function Login({handleClick}) {
     <div className='login'>
     <h1>{notLoggedInError}</h1>
     <form onSubmit={handleSubmit}>
-      <label className='formLabelStyle'>
+      <label style={{fontWeight: "bold"}}>
         USERNAME:
         <input 
         style={{marginLeft: "1%"}}
@@ -61,7 +63,7 @@ export default function Login({handleClick}) {
       </label>
       <br />
       <br />
-      <label>
+      <label style={{fontWeight: "bold"}}>
           PASSWORD:
           <input 
           style={{marginLeft: "1%"}}
@@ -72,8 +74,8 @@ export default function Login({handleClick}) {
           />
       </label>
       <br />
+      <h3 style={{marginLeft: "4%"}}>{displayError}</h3>
       <button style={{marginLeft: "27%"}} type='submit'>LOGIN</button>
-      {displayError}
       <button style={{marginLeft: "1%"}} onClick={handleClick}>REGISTER</button>
     </form>
     
