@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import { UserContext  } from './Context/User'
+import { UserContext  } from '../Context/User'
 import Profile from './Profile'
 
 export default function Login({handleClick}) {
@@ -42,11 +42,9 @@ export default function Login({handleClick}) {
             }
         }) 
       }
-      
-      
+        
       const displayError = error ? <i>{error}</i> : null
       
-
 
   return (
     <div className='login'>

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { UserContext } from './Context/User'
+import { UserContext } from '../Context/User'
 
 export default function Test() {
 

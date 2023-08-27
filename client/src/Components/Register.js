@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import { UserContext } from './Context/User'
+import { UserContext } from '../Context/User'
 
 export default function Register() {
 
@@ -110,9 +110,10 @@ export default function Register() {
             />
         </label>
         <br />
-        <button style={{marginLeft: "40%"}} type='submit'>SUBMIT</button>
+        <button type='submit' style={{marginLeft: "40%"}}>SUBMIT</button>
         {displayError}
       </form>
-    </div>
+      </div>
+    
   )
 }

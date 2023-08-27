@@ -1,19 +1,15 @@
 import React, {useContext} from 'react'
-import { UserContext } from './Context/User'
+import { UserContext } from '../Context/User'
 import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
 
   // eslint-disable-next-line
-  const {loggedIn, handleLogout} = useContext(UserContext)
+  const {handleLogout} = useContext(UserContext)
 
 const linkStyle = {
     color: "white"
 }
-
-
-
-
 
   return (
     <div className="navBar">
