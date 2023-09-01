@@ -27,7 +27,7 @@ function App() {
         <Route path='/login' element={<ToggleLogin />} /> 
         <Route path='/books' element={<Books />} /> 
         <Route path='/books/:id' element={<BookDetails />} />
-        <Route path='/addnewbook' element={<AddNewBook />} />
+        <Route path='/addbook' element={<AddNewBook />} />
         <Route path='register' element={<Register />} /> 
       </Routes>
     </div>

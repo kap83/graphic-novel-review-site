@@ -9,7 +9,6 @@ export function BookProvider({children}) {
         fetch('/books')
         .then(res => res.json())
         .then(data => {
-          console.log("fetched data", data)
           setBooksData(data)
         })
     },[])

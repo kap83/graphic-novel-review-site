@@ -26476,3 +26476,1422 @@ Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 1009)
 Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 3105)
 
 
+  [1m[36mBook Load (2.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/me" for 127.0.0.1 at 2023-09-01 14:29:59 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 14:29:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 23ms (Views: 4.1ms | ActiveRecord: 3.9ms | Allocations: 11376)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 3.0ms | Allocations: 14409)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:04:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.71ms)
+Completed 200 OK in 22ms (Views: 12.2ms | ActiveRecord: 4.9ms | Allocations: 14408)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:04:50 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 18ms (Views: 1.8ms | ActiveRecord: 3.5ms | Allocations: 6631)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:18:23 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.04ms)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 6.0ms | Allocations: 6185)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:18:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 23ms (Views: 3.7ms | ActiveRecord: 4.1ms | Allocations: 11353)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:18:39 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.04ms)
+Completed 200 OK in 39ms (Views: 13.2ms | ActiveRecord: 6.9ms | Allocations: 6188)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:18:39 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 77ms (Views: 3.3ms | ActiveRecord: 5.6ms | Allocations: 6736)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:26:48 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:26:48 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 6.3ms | Allocations: 3919)
+
+
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.31ms)
+Completed 200 OK in 29ms (Views: 9.1ms | ActiveRecord: 7.1ms | Allocations: 6233)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:28:32 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.85ms)
+Completed 200 OK in 26ms (Views: 9.1ms | ActiveRecord: 8.7ms | Allocations: 12628)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:28:32 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 1184)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:37:09 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.75ms)
+Completed 200 OK in 19ms (Views: 4.0ms | ActiveRecord: 7.4ms | Allocations: 6116)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:37:09 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 6.5ms | Allocations: 3805)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:25 -0400
+Processing by BooksController#index as */*
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:25 -0400
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 25ms (Views: 6.5ms | ActiveRecord: 9.0ms | Allocations: 5906)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.16ms)
+Completed 200 OK in 27ms (Views: 2.9ms | ActiveRecord: 6.7ms | Allocations: 4125)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:25 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.94ms)
+Completed 200 OK in 25ms (Views: 8.6ms | ActiveRecord: 5.5ms | Allocations: 5907)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 24ms (Views: 1.9ms | ActiveRecord: 7.6ms | Allocations: 3823)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.63ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 3084)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 3084)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 1071)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 3098)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:26 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 966)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 15:50:30 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 15:50:30 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 998)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:01:20 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:01:20 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.98ms)
+Completed 200 OK in 26ms (Views: 10.1ms | ActiveRecord: 7.8ms | Allocations: 5907)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 101ms (Views: 1.7ms | ActiveRecord: 7.9ms | Allocations: 3828)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:02:25 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.88ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:02:25 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 36ms (Views: 2.5ms | ActiveRecord: 10.7ms | Allocations: 3822)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:07:46 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:07:46 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.09ms)
+Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 2.6ms | Allocations: 1001)
+
+
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.52ms)
+Completed 200 OK in 35ms (Views: 9.6ms | ActiveRecord: 11.9ms | Allocations: 5922)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:08:03 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 22ms (Views: 6.9ms | ActiveRecord: 6.9ms | Allocations: 5906)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:08:04 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.9ms | Allocations: 1019)
+
+
+Started PATCH "/books/12" for ::1 at 2023-09-01 16:35:38 -0400
+  
+SyntaxError (/home/kap/code/labs/phase4/graphic-novel-review-site/app/controllers/books_controller.rb:26: syntax error, unexpected '}', expecting =>
+...der json: {errors. book.errors}, status: :not_modified
+...                              ^
+):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected '}', expecting =>
+app/controllers/books_controller.rb:26: syntax error, unexpected '}', expecting =>
+Started PATCH "/books/12" for ::1 at 2023-09-01 16:36:09 -0400
+Processing by BooksController#update as */*
+  Parameters: {"title"=>"Iron Man: Extremis", "author"=>"Warren Ellis", "artist"=>"Adi Granov", "genre"=>"Superhero", "publisher"=>"Marvel", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/I/41NJchKtBpL._AC_UF1000,1000_QL80_.jpg", "id"=>"12"}
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x00007f8248721880>, params: {"title"=>"Iron Man: Extremis", "author"=>"Warren Ellis", "artist"=>"Adi Granov", "genre"=>"Superhero", "publisher"=>"Marvel", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/I/41NJchKtBpL._AC_UF1000,1000_QL80_.jpg", "controller"=>"books", "action"=>"update", "id"=>"12"} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (5.1ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "author" = $2, "artist" = $3, "genre" = $4, "publisher" = $5, "cover_url" = $6, "updated_at" = $7 WHERE "books"."id" = $8[0m  [["title", "Iron Man: Extremis"], ["author", "Warren Ellis"], ["artist", "Adi Granov"], ["genre", "Superhero"], ["publisher", "Marvel"], ["cover_url", "https://m.media-amazon.com/images/I/41NJchKtBpL._AC_UF1000,1000_QL80_.jpg"], ["updated_at", "2023-09-01 20:36:09.167381"], ["id", 12]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 34.4ms | Allocations: 12939)
+
+
+  
+ArgumentError (Unrecognized status code :OK):
+  
+app/controllers/books_controller.rb:24:in `update'
+Started PATCH "/books/12" for ::1 at 2023-09-01 16:36:30 -0400
+Processing by BooksController#update as */*
+  Parameters: {"title"=>"Iron Man: Extremis", "author"=>"Warren Ellis", "artist"=>"Adi Granov", "genre"=>"Superhero", "publisher"=>"Marvel", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/I/41NJchKtBpL._AC_UF1000,1000_QL80_.jpg", "id"=>"12"}
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x00007f824866de20>, params: {"title"=>"Iron Man: Extremis", "author"=>"Warren Ellis", "artist"=>"Adi Granov", "genre"=>"Superhero", "publisher"=>"Marvel", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/I/41NJchKtBpL._AC_UF1000,1000_QL80_.jpg", "controller"=>"books", "action"=>"update", "id"=>"12"} }[0m
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 51ms (Views: 2.1ms | ActiveRecord: 11.1ms | Allocations: 8736)
+
+
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:37:29 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:37:29 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Processing by BooksController#index as */*
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 200 OK in 32ms (Views: 2.8ms | ActiveRecord: 6.8ms | Allocations: 7447)
+
+
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 32ms (Views: 12.2ms | ActiveRecord: 5.6ms | Allocations: 9956)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:37:45 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.33ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 3204)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:37:45 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 34ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 4164)
+
+
+Started PATCH "/books/book/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 16:54:23 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/book/%7BparseId%7D"):
+  
+Started PATCH "/books/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 16:54:46 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/books/%7BparseId%7D"):
+  
+Started GET "/books" for 127.0.0.1 at 2023-09-01 16:59:14 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 16:59:14 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 28ms (Views: 9.7ms | ActiveRecord: 6.7ms | Allocations: 9710)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 31ms (Views: 1.6ms | ActiveRecord: 8.0ms | Allocations: 7387)
+
+
+Started PATCH "/books/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 16:59:36 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/books/%7BparseId%7D"):
+  
+Started PATCH "/books/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 16:59:38 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/books/%7BparseId%7D"):
+  
+Started GET "/books" for 127.0.0.1 at 2023-09-01 17:10:38 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.88ms)
+Completed 200 OK in 24ms (Views: 9.4ms | ActiveRecord: 6.6ms | Allocations: 6143)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 17:10:38 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 1082)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 17:15:11 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 17:15:11 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.3ms)
+Completed 200 OK in 69ms (Views: 30.2ms | ActiveRecord: 6.5ms | Allocations: 9992)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 17:15:57 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.13ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 3204)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 17:15:58 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 981)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 17:25:58 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.88ms)
+Completed 200 OK in 28ms (Views: 6.8ms | ActiveRecord: 7.8ms | Allocations: 6052)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 17:25:58 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 37ms (Views: 1.6ms | ActiveRecord: 14.3ms | Allocations: 3820)
+
+
+Started PATCH "/books/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 17:51:48 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/books/%7BparseId%7D"):
+  
+Started PATCH "/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 17:52:34 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"publisher"=>"DC", "id"=>"{parseId}"}
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 17.1ms | Allocations: 4769)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass
+
+         render json: {errors: book.errors}, status: :not_modified
+                                   ^^^^^^^):
+  
+app/controllers/books_controller.rb:26:in `update'
+Started PATCH "/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 17:53:48 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"publisher"=>"DC", "id"=>"{parseId}"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 11.7ms | Allocations: 5930)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass
+
+         render json: {errors: book.errors}, status: :not_modified
+                                   ^^^^^^^):
+  
+app/controllers/books_controller.rb:26:in `update'
+Started PATCH "/books/%7BparseId%7D" for 127.0.0.1 at 2023-09-01 17:54:21 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"publisher"=>"DC", "id"=>"{parseId}"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 17:56:36 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"publisher"=>"DC", "id"=>"11"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x00007f824a60cee8>, params: {"publisher"=>"DC", "controller"=>"books", "action"=>"update", "id"=>"11"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (2.2ms)[0m  [1m[33mUPDATE "books" SET "publisher" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["publisher", "DC"], ["updated_at", "2023-09-01 21:56:36.659865"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 200 OK in 91ms (Views: 3.1ms | ActiveRecord: 25.8ms | Allocations: 10239)
+
+
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2023-09-01 17:57:16 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.64ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.7ms | Allocations: 3262)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 17:57:17 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 14ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 4146)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 17:58:23 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"genre"=>"Superheroes", "id"=>"11"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:06:48 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.38ms)
+Completed 200 OK in 40ms (Views: 16.4ms | ActiveRecord: 6.8ms | Allocations: 9989)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:06:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.05ms)
+Completed 200 OK in 55ms (Views: 6.3ms | ActiveRecord: 6.4ms | Allocations: 11376)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:08:38 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:08:38 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1163)
+
+
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.45ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 3204)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:10:52 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.85ms)
+Completed 200 OK in 21ms (Views: 13.1ms | ActiveRecord: 4.6ms | Allocations: 9629)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:10:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 32ms (Views: 6.0ms | ActiveRecord: 7.2ms | Allocations: 11355)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:11:43 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"cover_url"=>"", "title"=>"52", "author"=>"Geoff Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"", "volume"=>"", "id"=>"11"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:12:41 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"cover_url"=>"", "title"=>"52", "author"=>"Geoff Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"", "volume"=>"", "id"=>"11"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Completed 204 No Content in 29ms (ActiveRecord: 8.4ms | Allocations: 4605)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:12:57 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.3ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 3.8ms | Allocations: 7439)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:12:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 20ms (Views: 2.9ms | ActiveRecord: 3.7ms | Allocations: 11370)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:13:19 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"cover_url"=>"", "title"=>"52", "author"=>"Geoff Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"", "volume"=>"", "id"=>"11"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x00007f824848fc48>, params: {"cover_url"=>"", "title"=>"52", "author"=>"Geoff Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"", "volume"=>"", "controller"=>"books", "action"=>"update", "id"=>"11"} }[0m
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 2.7ms | Allocations: 5803)
+
+
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:15:29 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:15:29 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 2.5ms | Allocations: 4484)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.18ms)
+Completed 200 OK in 35ms (Views: 11.1ms | ActiveRecord: 2.8ms | Allocations: 9930)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:15:39 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 3224)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:15:39 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 1126)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:18:37 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "cover_url"=>"", "title"=>"52", "author"=>"Geoff Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"", "volume"=>""}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 18ms (Views: 3.0ms | ActiveRecord: 3.5ms | Allocations: 5687)
+
+
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:25:49 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:25:49 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 35ms (Views: 9.9ms | ActiveRecord: 12.2ms | Allocations: 15055)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 35ms (Views: 1.8ms | ActiveRecord: 16.0ms | Allocations: 15807)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:25:54 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:25:54 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1123)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 70ms (Views: 8.1ms | ActiveRecord: 6.2ms | Allocations: 10050)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:25:58 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.55ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 3225)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:25:58 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 12ms (Views: 1.5ms | ActiveRecord: 4.7ms | Allocations: 4508)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:27:00 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.3ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 3159)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:27:00 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 29ms (Views: 1.8ms | ActiveRecord: 5.8ms | Allocations: 7384)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:27:37 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"GM", "genre"=>"Super", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (3.2ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "author" = $2, "artist" = $3, "genre" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["title", "52"], ["author", "Geof Johns"], ["artist", "GM"], ["genre", "Super"], ["updated_at", "2023-09-01 22:27:37.735139"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 5.5ms | Allocations: 3802)
+
+
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:28:09 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:28:09 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.23ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 1.1ms | Allocations: 6734)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 81ms (Views: 8.2ms | ActiveRecord: 5.5ms | Allocations: 7464)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:28:45 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 3204)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:28:45 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1027)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:30:05 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:30:05 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 999)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:33:55 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:33:55 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 991)
+
+
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.01ms)
+Completed 200 OK in 21ms (Views: 6.1ms | ActiveRecord: 6.0ms | Allocations: 6025)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:35:15 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:35:15 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.5ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 993)
+
+
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 3083)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:41:53 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 19ms (Views: 5.2ms | ActiveRecord: 6.8ms | Allocations: 5906)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:41:54 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 27ms (Views: 1.8ms | ActiveRecord: 12.1ms | Allocations: 3930)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:42:25 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "genre" = $2, "updated_at" = $3 WHERE "books"."id" = $4[0m  [["artist", "Grant Morrison"], ["genre", "Superheroes"], ["updated_at", "2023-09-01 22:42:25.881233"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 3.6ms | Allocations: 3132)
+
+
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:44:52 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 31ms (Views: 12.2ms | ActiveRecord: 9.5ms | Allocations: 12669)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:44:52 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 6.8ms | Allocations: 3936)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:44:53 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:44:53 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 973)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.06ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 3128)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:44:53 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:44:53 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 982)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 3225)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:44:56 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.9ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:44:57 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.9ms | Allocations: 1095)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:45:30 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.22ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:45:30 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 994)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 18:56:36 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Greg Rucka", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Greg Rucka"], ["updated_at", "2023-09-01 22:56:36.657241"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 25ms (Views: 0.8ms | ActiveRecord: 7.7ms | Allocations: 6601)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:56:54 -0400
+Processing by BooksController#index as */*
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:56:54 -0400
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Processing by UsersController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.16ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 3083)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 5.3ms | Allocations: 3905)
+
+
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/books" for 127.0.0.1 at 2023-09-01 18:59:26 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.26ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 3104)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 18:59:26 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 990)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:01:18 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Grant Morrison"], ["updated_at", "2023-09-01 23:01:18.117380"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 3.4ms | Allocations: 3105)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:01:23 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:01:23 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 2132)
+
+
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.47ms)
+Completed 200 OK in 22ms (Views: 5.0ms | ActiveRecord: 8.2ms | Allocations: 6982)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:08:43 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Mark Waid", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (3.7ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Mark Waid"], ["updated_at", "2023-09-01 23:08:43.713796"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.88ms)
+Completed 200 OK in 71ms (Views: 2.6ms | ActiveRecord: 24.0ms | Allocations: 5549)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:09:09 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 20ms (Views: 5.2ms | ActiveRecord: 5.6ms | Allocations: 5906)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:09:09 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 1.0ms | Allocations: 998)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:09:37 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Greg Rucka", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Greg Rucka"], ["updated_at", "2023-09-01 23:09:37.191190"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 62ms (Views: 2.0ms | ActiveRecord: 21.5ms | Allocations: 5573)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:09:41 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.84ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:09:41 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 992)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:12:05 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"My Foot", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.6ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "My Foot"], ["updated_at", "2023-09-01 23:12:05.271455"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 3.0ms | Allocations: 2700)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:13:13 -0400
+Processing by UsersController#show as */*
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:13:13 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 975)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.63ms)
+Completed 200 OK in 32ms (Views: 9.9ms | ActiveRecord: 7.8ms | Allocations: 5907)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:13:16 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:13:16 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 974)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.91ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 3083)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:15:36 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.9ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Grant"], ["updated_at", "2023-09-01 23:15:36.848338"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 86ms (Views: 1.2ms | ActiveRecord: 2.9ms | Allocations: 2698)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:16:28 -0400
+Processing by BooksController#index as */*
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:16:28 -0400
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+Processing by UsersController#show as */*
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.96ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.9ms | Allocations: 3083)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 21ms (Views: 0.8ms | ActiveRecord: 6.4ms | Allocations: 3805)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:16:37 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant Morrison", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "artist" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["artist", "Grant Morrison"], ["updated_at", "2023-09-01 23:16:37.141498"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 27ms (Views: 1.1ms | ActiveRecord: 3.4ms | Allocations: 2719)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:17:22 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"100", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "artist" = $2, "updated_at" = $3 WHERE "books"."id" = $4[0m  [["title", "100"], ["artist", "Grant"], ["updated_at", "2023-09-01 23:17:22.220832"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 2.7ms | Allocations: 2698)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:19:03 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:19:03 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 983)
+
+
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 18ms (Views: 4.9ms | ActiveRecord: 6.0ms | Allocations: 5906)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:19:12 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (1.4ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "52"], ["updated_at", "2023-09-01 23:19:12.207810"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 2.9ms | Allocations: 2724)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:20:52 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1056)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:23:01 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:23:01 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1004)
+
+
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 20ms (Views: 6.7ms | ActiveRecord: 6.5ms | Allocations: 5961)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:23:07 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"66", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "66"], ["updated_at", "2023-09-01 23:23:07.961109"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 29ms (Views: 1.2ms | ActiveRecord: 10.2ms | Allocations: 5540)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:23:31 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:23:31 -0400
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 981)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.27ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 3083)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:30:30 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"52", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.6ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "52"], ["updated_at", "2023-09-01 23:30:30.143118"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 28ms (Views: 1.1ms | ActiveRecord: 9.7ms | Allocations: 5547)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:30:33 -0400
+Processing by UsersController#show as */*
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:30:33 -0400
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Processing by BooksController#index as */*
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 983)
+
+
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+Completed 200 OK in 18ms (Views: 5.3ms | ActiveRecord: 6.1ms | Allocations: 5906)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:31:12 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"69", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "69"], ["updated_at", "2023-09-01 23:31:12.826514"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 28ms (Views: 1.9ms | ActiveRecord: 6.4ms | Allocations: 2717)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:31:14 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.1ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:31:14 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 35ms (Views: 1.5ms | ActiveRecord: 13.1ms | Allocations: 3809)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:32:18 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"59", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "59"], ["updated_at", "2023-09-01 23:32:18.357076"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 23ms (Views: 1.4ms | ActiveRecord: 5.7ms | Allocations: 2719)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:33:02 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:33:02 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 975)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.97ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:33:04 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:33:04 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 987)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 19ms (Views: 5.1ms | ActiveRecord: 6.0ms | Allocations: 5907)
+
+
+Started PATCH "/books/11" for 127.0.0.1 at 2023-09-01 19:33:09 -0400
+Processing by BooksController#update as JSON
+  Parameters: {"id"=>"11", "title"=>"100", "author"=>"Geof Johns", "artist"=>"Grant", "genre"=>"Superheroes", "publisher"=>"DC", "volume"=>1, "cover_url"=>"https://m.media-amazon.com/images/P/B01EZG38XK.01._SCLZZZZZZZ_SX500_.jpg"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mBook Update (3.5ms)[0m  [1m[33mUPDATE "books" SET "title" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["title", "100"], ["updated_at", "2023-09-01 23:33:09.418083"], ["id", 11]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:23:in `update'
+[active_model_serializers] Rendered BookSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 5.0ms | Allocations: 2695)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:33:33 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.18ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 3083)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:33:34 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 1.9ms | Allocations: 1016)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-01 19:33:40 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-01 19:33:40 -0400
+Processing by UsersController#show as */*
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.13ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 983)
+
+
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 3083)
+
+

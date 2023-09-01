@@ -26,19 +26,7 @@ const linkStyle = {
       </NavLink>
     <button onClick={handleLogout}>LOGOUT</button>
     </div>
-    <div>
-        <NavLink
-          to="/addnewbook"
-          >
-            Add Book
-        </NavLink> 
-        <br />
-        <NavLink
-          to="/books"
-        >
-          Back to Books
-        </NavLink>
-    </div>
+  
     </>
   )
 }
