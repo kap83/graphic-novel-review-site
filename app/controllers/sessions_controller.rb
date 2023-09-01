@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
 
-    #TODO
-        #FIX ERROR MSG --> correct msg seems to be sent back when checking in bye bug w/ response.body
 
     def create
 

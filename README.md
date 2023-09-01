@@ -23,3 +23,8 @@ Things you may want to cover:
 
 * ...
 # graphic-novel-review-site
+
+
+
+
+https://askubuntu.com/questions/539187/how-to-make-postgres-start-automatically-on-boot

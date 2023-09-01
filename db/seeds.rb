@@ -2,6 +2,7 @@ puts "🌱 Seeding spices..."
 
 User.create(first_name: "Alex", last_name: "Manes", username: "spectralsongwrite", password: "dsIda83?lk" )
 User.create(first_name: "Maria", last_name: "DeLuca", username: "amethystoracle", password: "handinmypocket")
+User.create(first_name: "Test", last_name: "User", username: "test", password: "testing")
 
 Book.create(title: "100 Bullets", author: "Brian Azzarello", artist: "Eduardo Risso", genre: "Crime", publisher: "Vertigo", volume: 1, user_id: 1, cover_url:"https://m.media-amazon.com/images/P/1563896451.01._SCLZZZZZZZ_SX500_.jpg")
 Book.create(title: "Saga", author: "Brian K. Vaughan", artist: "Fiona Staples", genre: "Science Fiction", publisher: "Image", volume: 1, user_id: 2, cover_url:"https://m.media-amazon.com/images/I/719UvBwUycL.jpg")
