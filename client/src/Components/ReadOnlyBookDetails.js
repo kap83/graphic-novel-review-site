@@ -1,6 +1,23 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { BooksContext } from '../Context/Books'
+import { useNavigate } from 'react-router-dom'
 
-export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook}) {
+export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook, parseId}) {
+
+  const {handleDeletedBook} = useContext(BooksContext)
+  const navigate = useNavigate()
+
+  const handleDeleteClick = () => {
+    fetch(`/books/${parseId}`, {
+      method: 'DELETE',
+    })
+    .then(() => {
+      handleDeletedBook(selectedBook)
+      navigate('/books')
+    })
+      
+  }
+
   return (
     <>
       <li>TITLE: {selectedBook.title}</li>
@@ -11,7 +28,7 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
       <li>VOL: {selectedBook.volume}</li>
       <li>
         <button type='button' onClick={handleEditToggleClick}>EDIT</button>
-        <button>DELETE</button>
+        <button type='button' onClick={handleDeleteClick}>DELETE</button>
       </li>
 </>
   )

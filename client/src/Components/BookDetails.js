@@ -7,7 +7,7 @@ import ReadOnlyBookDetails from './ReadOnlyBookDetails'
 
 export default function BookDetails() {
 
-  const {booksData, setBooksData} = useContext(BooksContext)
+  const {booksData, handleEditedBook} = useContext(BooksContext)
 
   const {id} = useParams()
   const parseId = parseInt(id)
@@ -22,6 +22,8 @@ export default function BookDetails() {
     volume: "",
     cover_url: ""
   })
+
+  
 
   const [isEditing, setIsEditing] = useState(false)
 
@@ -42,7 +44,7 @@ useEffect(() => {
   setSelectedBook(findBook)
   setFormValues(findBook)
   // eslint-disable-next-line
-}, [parseId])
+}, [parseId, booksData])
 
 const handleEditToggleClick = () => {
   setIsEditing(!isEditing)
@@ -66,19 +68,11 @@ const handleBookEditSubmit = (e) => {
     body: JSON.stringify(formValues)
   })
   .then(res=> res.json())
-  .then(updatedBook => {
-    
-    //create a new array with every book who's id DOESN'T match the updatedBook.id
-    const updatedBooksArr = booksData.filter(book => book.id !== updatedBook.id)
-   //push updatedBook into the updatedBooksArr 
-    updatedBooksArr.push(updatedBook)
-    //setBooksData by creating a copy of the previous BooksData and replacing it with updatedBookArr
-  setBooksData(prevBooksData => [...prevBooksData, updatedBooksArr])
-
-  })
+  .then(editedBook => handleEditedBook(editedBook))
   
   setIsEditing(false)
 }
+
 
 
   return (
@@ -102,6 +96,7 @@ const handleBookEditSubmit = (e) => {
                 (
                 <ReadOnlyBookDetails 
                   selectedBook={selectedBook} 
+                  parseId={parseId}
                   handleEditToggleClick={handleEditToggleClick}
                   />
               )

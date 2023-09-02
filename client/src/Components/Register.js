@@ -90,7 +90,6 @@ export default function Register() {
             <input 
                 style={{marginLeft: "25%"}}
                 type='text'
-                placeholder='*********'
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
@@ -103,7 +102,6 @@ export default function Register() {
             <input 
                 style={{marginLeft: "25%"}}
                 type='text'
-                placeholder='*********'
                 value={passwordConfirmation}
                 required
                 onChange={(e) => setPasswordConfirmation(e.target.value)}

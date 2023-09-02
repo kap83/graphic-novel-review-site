@@ -13,10 +13,27 @@ export function BookProvider({children}) {
         })
     },[])
 
+    const handleEditedBook = (editedBook) => {
+         //create a new array with every book who's id DOESN'T match the updatedBook.id
+        const updatedBooksArr = booksData.filter(book => book.id !== editedBook.id)
+        //push updatedBook into the updatedBooksArr 
+        updatedBooksArr.push(editedBook)
+        setBooksData(updatedBooksArr)
+    }
+
+    const handleDeletedBook = (deletedBook) => {
+        const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
+        //console.log("in context", updatedBooksArr)
+        setBooksData(updatedBooksArr)
+    }
+
+    console.log("did it update?", booksData)
 
     const booksValues ={
         booksData,
-        setBooksData
+        setBooksData,
+        handleEditedBook,
+        handleDeletedBook
     }
 
     return <BooksContext.Provider value={booksValues}>{children}</BooksContext.Provider>

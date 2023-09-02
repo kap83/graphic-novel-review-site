@@ -81,15 +81,14 @@ code {
   text-align: left;
 } */
 
+/* fix the img container spacing.  */
+
 .image-container {
   float: left;
   padding-left: 10%;
-  padding-right: 5%;
   margin-left: 1px;
   width: 33.33%;
   width: 300px;
-  background: none;
-  border: none;
 }
 
 
