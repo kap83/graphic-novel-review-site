@@ -29,6 +29,7 @@ class BooksController < ApplicationController
 
     def destroy
       book = find_book
+
       if book
          book.destroy
          head :no_content

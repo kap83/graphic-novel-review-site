@@ -77,16 +77,19 @@ const handleBookEditSubmit = (e) => {
 
   return (
     <div>
-        <ul>
-          <li>
+        <ul className='ulStyle'>
+        <li>
             <img 
               src={selectedBook.cover_url}  
               alt={selectedBook.title} 
+              
               width={307}
               height={500}
             />
           </li>
-          <form onSubmit={handleBookEditSubmit}>
+          <form 
+          
+          onSubmit={handleBookEditSubmit}>
           {isEditing ? (
               <EditableBookDetails 
                 selectedBook={selectedBook} 

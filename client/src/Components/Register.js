@@ -47,7 +47,7 @@ export default function Register() {
     const displayError = error ? <i>{error}</i> : null
 
   return (
-    <div className='register'>
+    <div className='registerStyle'>
       <form onSubmit={handleSubmit}>
       <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             FIRST NAME:

@@ -56,12 +56,10 @@ const {setBooksData} = useContext(BooksContext)
       setChecked("")
     }
 
-    console.log(checked)
-
   return (
     <div>
-      <Link to={'/books'}>
-      <p>Back To Books</p>
+      <Link style={{textAlign: "center"}} to={'/books'}>
+      <p >Back To Books</p>
       </Link>
       <form onSubmit={handleSubmit}>
         <label>

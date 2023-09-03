@@ -2,9 +2,10 @@ import React from 'react'
 
 export default function EditableBookDetails({handleEditToggleClick, handleEditFormChange, selectedBook}) {
 
+//create css for input boxes. reminder to close and open to see changes 
 
   return (
-    <>
+    <div className='liStyle'>
       <li>
         COVER URL:
         <input 
@@ -72,6 +73,6 @@ export default function EditableBookDetails({handleEditToggleClick, handleEditFo
       <button type='submit'>SAVE</button>
       <button onClick={handleEditToggleClick}>CANCEL</button>
      </li>
-    </>
+    </div>
   )
 }

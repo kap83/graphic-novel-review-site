@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../Context/User'
 import { NavLink } from 'react-router-dom'
+
 export default function NavBar() {
 
   // eslint-disable-next-line
@@ -10,11 +11,12 @@ const linkStyle = {
     color: "white"
 }
 
- if (loggedIn) return (
+
+if (loggedIn) return (
     <> 
     <div className="navBar">
     <NavLink
-        to="/"
+        to="/profile"
         style={linkStyle}
         >
           Profile

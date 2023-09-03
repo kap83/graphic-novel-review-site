@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../Context/User'
 // eslint-disable-next-line
-import UsersBooks from './UsersBooks'
 
 
 export default function Profile() {
@@ -13,13 +12,10 @@ export default function Profile() {
   return (
     <div>
       <h2>Hi {currentUser.first_name} this is profile!</h2> 
-      {/* {currentUser.books.map(book => 
-           <UsersBooks 
-           key={book.id}
-           book={book}
-         />
-        
-      )} */}
+      <button>Edit User Info</button>
+        {/* show input tags for first_name, last_name, username and password */}
+        {/* possibly another button for password/password confirmation  */}
+
     </div>
   )
 }

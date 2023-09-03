@@ -1,4 +1,4 @@
-import './App.css'
+
 import React, {useContext} from 'react'
 import {Route, Routes} from 'react-router-dom'
 import { UserContext } from '../Context/User';
@@ -8,7 +8,6 @@ import Books from './Books'
 import ToggleLogin from './ToggleLogin';
 import Register from './Register';
 import AddNewBook from './AddNewBook';
-// eslint-disable-next-line
 import BookDetails from './BookDetails';
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path='/' element={<Profile />} /> 
+        <Route path='/profile' element={<Profile />} /> 
         <Route path='/login' element={<ToggleLogin />} /> 
         <Route path='/books' element={<Books />} /> 
         <Route path='/books/:id' element={<BookDetails />} />

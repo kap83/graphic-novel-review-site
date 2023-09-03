@@ -43,7 +43,7 @@ export default function Login({handleClick}) {
      
 
   return (
-    <div className='login'>
+    <div className='loginStyle'>
     <h1>{notLoggedInError}</h1>
     <form onSubmit={handleSubmit}>
       <label style={{fontWeight: "bold"}}>
