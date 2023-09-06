@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export const UserContext = React.createContext();
 
 export function UserProvider({ children }) {
-  // eslint-disable-next-line
+ 
   const [loggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
   const [notLoggedInError, setNotLoggedInError] = useState('')

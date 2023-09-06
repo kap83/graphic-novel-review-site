@@ -5,7 +5,12 @@ class BooksController < ApplicationController
 
     def index
        book = Book.all.order(title: 'asc')
-       render json: book
+       render json: book.includes(:reviews)
+    end
+
+    def show 
+      book = find_book
+      render json: book
     end
 
     def create

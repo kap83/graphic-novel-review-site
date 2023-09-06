@@ -8,8 +8,6 @@ export default function Books() {
 
   const {booksData} = useContext(BooksContext)
   
-
-
   return (
     <div>
       <Link to={"/addbook"}>

@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import { BooksContext } from '../Context/Books'
 import EditableBookDetails from './EditableBookDetails'
 import ReadOnlyBookDetails from './ReadOnlyBookDetails'
-
+import ShowReviewsBtn from './ShowReviewsBtn'
 
 export default function BookDetails() {
 
@@ -20,10 +20,10 @@ export default function BookDetails() {
     genre: "",
     publisher: "",
     volume: "",
-    cover_url: ""
+    cover_url: "",
+    reviews: []
   })
 
-  
 
   const [isEditing, setIsEditing] = useState(false)
 
@@ -73,8 +73,6 @@ const handleBookEditSubmit = (e) => {
   setIsEditing(false)
 }
 
-
-
   return (
     <div>
         <ul className='ulStyle'>
@@ -82,13 +80,9 @@ const handleBookEditSubmit = (e) => {
             <img 
               src={selectedBook.cover_url}  
               alt={selectedBook.title} 
-              
-              width={307}
-              height={500}
             />
           </li>
-          <form 
-          
+          <form   
           onSubmit={handleBookEditSubmit}>
           {isEditing ? (
               <EditableBookDetails 
@@ -106,6 +100,7 @@ const handleBookEditSubmit = (e) => {
             }
           </form>
       </ul>
+      <ShowReviewsBtn selectedBook={selectedBook}/>
     </div>
   )
 }

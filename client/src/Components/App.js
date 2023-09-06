@@ -14,10 +14,9 @@ function App() {
 
   const {loggedIn} = useContext(UserContext)
 
+  
+  
   if (!loggedIn) return <ToggleLogin /> 
-  
-  
-
   return (
     <div className="App">
       <NavBar />

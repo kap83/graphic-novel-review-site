@@ -23,11 +23,8 @@ export function BookProvider({children}) {
 
     const handleDeletedBook = (deletedBook) => {
         const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
-        //console.log("in context", updatedBooksArr)
         setBooksData(updatedBooksArr)
     }
-
-    console.log("did it update?", booksData)
 
     const booksValues ={
         booksData,

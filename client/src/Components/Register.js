@@ -3,7 +3,7 @@ import { UserContext } from '../Context/User'
 
 export default function Register() {
 
-    const {setLoggedIn, currentUser, setCurrentUser} = useContext(UserContext)
+    const {setLoggedIn, setCurrentUser} = useContext(UserContext)
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [username, setUsername] = useState('')
@@ -43,7 +43,6 @@ export default function Register() {
         })
     }
 
-    console.log("current user", currentUser)
     const displayError = error ? <i>{error}</i> : null
 
   return (

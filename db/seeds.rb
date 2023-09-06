@@ -14,5 +14,8 @@ Book.create(title: "The Goon", author: "Eric Powell", artist: "Eric Powell", gen
 Book.create(title: "Tomie", author: "Junji Ito", artist: "Junji Ito", genre: "Horro", publisher: "Viz Media", volume: 1, user_id: 2, cover_url:"https://m.media-amazon.com/images/P/B01M7XY0KL.01._SCLZZZZZZZ_SX500_.jpg")
 Book.create(title: "On A Sunbeam", author: "Tillie Walden", artist: "Tillie Walden", genre: "Science Fiction", publisher: "First Second", volume: 1, user_id: 2, cover_url:"https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781250178138_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D")
 
+Review.create(comment: "Fantastic Read! Can't to get my hands on the next one!", book_id: 1, user_id: 1)
+Review.create(comment: "One of the BEST Superman stories I've ever read! This made me like Superman all over again. Very well written.", book_id: 3, user_id: 2)
+Review.create(comment: "Great idea. But I don't think it's very well excuted. I'd give it three stars.", book_id: 1, user_id: 2)
 
 puts "✅ Done seeding!"

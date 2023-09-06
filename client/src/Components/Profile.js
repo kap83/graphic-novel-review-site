@@ -7,7 +7,6 @@ export default function Profile() {
   
     const {currentUser} = useContext(UserContext)
 
-    console.log(currentUser)
 
   return (
     <div>

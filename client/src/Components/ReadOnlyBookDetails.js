@@ -18,6 +18,8 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
       
   }
 
+  
+
   return (
     <>    
     <div className='liStyle'>
@@ -30,11 +32,11 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
     </div>
     <div>
       <li>
-      
         <button type='button' onClick={handleEditToggleClick}>EDIT</button>
         <button type='button' onClick={handleDeleteClick}>DELETE</button>
       </li>
     </div> 
+    
 </>
   )
 }
