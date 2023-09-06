@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function ReadOnlyComments({review, toggleEdit}) {
+export default function ReadOnlyComments({review, formatDateAndTime, toggleEdit}) {
   return (
     <>
     
                     <tr>
                       <td>{review.username}</td>
+                      <td>{formatDateAndTime}</td>
                     </tr>
                     <tr>
                       <td>{review.comment}</td>

@@ -1,20 +1,6 @@
 import React from 'react'
 
-export default function EditableComments({review, toggleEdit, editableComment}) {
-
-  //review.comment - editableComment display all the others. 
-
-  //patch & delete 
-
-let options = {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  hour: "numeric",
-  minutes: "numeric",
-  seconds: "numeric"
-}
-const formatDateAndTIme = new Intl.DateTimeFormat('en-US', options).format(editableComment.created_at)
+export default function EditableComments({review, formatDateAndTime, toggleEdit, editableComment, handleEditFormChange}) {
 
 
 
@@ -22,7 +8,7 @@ const formatDateAndTIme = new Intl.DateTimeFormat('en-US', options).format(edita
     <>
        <tr>
       <td>{review.username}</td>
-      <td>{formatDateAndTIme}</td>
+      <td>{formatDateAndTime}</td>
     </tr>
     <tr>
       <td>
@@ -31,7 +17,7 @@ const formatDateAndTIme = new Intl.DateTimeFormat('en-US', options).format(edita
             type='text'
             style={{width: "500px"}}
             defaultValue={editableComment.comment}
-          // onChange={}
+            onChange={handleEditFormChange}
           />
           </>
       </td>

@@ -4,6 +4,7 @@ import { BooksContext } from '../Context/Books'
 import EditableBookDetails from './EditableBookDetails'
 import ReadOnlyBookDetails from './ReadOnlyBookDetails'
 import DisplayCommentsBtn from './DisplayCommentsBtn'
+import AddComments from './AddComments'
 
 export default function BookDetails() {
 
@@ -102,6 +103,7 @@ const handleBookEditSubmit = (e) => {
           </form>
       </ul>
       <DisplayCommentsBtn selectedBook={selectedBook}/>
+      <AddComments />
     </div>
   )
 }
