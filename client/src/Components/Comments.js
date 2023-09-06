@@ -3,14 +3,15 @@ import EditableComments from './EditableComments'
 import ReadOnlyComments from './ReadOnlyComments'
 import { Fragment } from 'react'
 
-export default function Reviews({selectedBook}) {
+export default function Comments({selectedBook}) {
 
 const [isEditing, setIsEditing] = useState(false)
 const [reviewsList, setReviewsList] = useState([])
 const [editableComment, setEditableComment] = useState({
   id: "",
   comment: "",
-  user_id: ""
+  user_id: "",
+  created_at: " "
 })
 
 const toggleEdit = (e, review) => {
@@ -23,27 +24,22 @@ const toggleEdit = (e, review) => {
       id: review.id,
       comment: review.comment,
       user_id: review.user_id,
-      book_id: selectedBook.id
+      book_id: selectedBook.id,
+      created_at: selectedBook.created_at
     }
     setEditableComment(formValues)
   } else {
-    setEditableComment([])
+    setEditableComment({})
     setIsEditing(false)
   }
-
- 
 }
 
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
-  if(selectedBook.reviews) {
+  if(selectedBook && selectedBook.reviews) {
     setReviewsList(selectedBook.reviews)
   }
 }, [selectedBook])
-
-
-console.log("got it?", editableComment)
-console.log("reviewList", reviewsList)
 
   return (
     <>
@@ -52,8 +48,16 @@ console.log("reviewList", reviewsList)
       <tbody>
         {reviewsList?.map(review => (
         <Fragment key={review.id}>
-          {isEditing ? <EditableComments review={review} toggleEdit={toggleEdit} editableComment={editableComment} /> 
-          : <ReadOnlyComments toggleEdit={toggleEdit} review={review} />}
+          {isEditing ? 
+            <EditableComments 
+              review={review} 
+              toggleEdit={toggleEdit} 
+              editableComment={editableComment} 
+            /> :
+            <ReadOnlyComments 
+              toggleEdit={toggleEdit} 
+              review={review} 
+            />}
         </Fragment>
         )
         )}

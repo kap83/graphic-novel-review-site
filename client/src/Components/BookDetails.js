@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import { BooksContext } from '../Context/Books'
 import EditableBookDetails from './EditableBookDetails'
 import ReadOnlyBookDetails from './ReadOnlyBookDetails'
-import ShowReviewsBtn from './ShowReviewsBtn'
+import DisplayCommentsBtn from './DisplayCommentsBtn'
 
 export default function BookDetails() {
 
@@ -24,6 +24,7 @@ export default function BookDetails() {
     reviews: []
   })
 
+  console.log("in BookDetails", selectedBook)
 
   const [isEditing, setIsEditing] = useState(false)
 
@@ -100,7 +101,7 @@ const handleBookEditSubmit = (e) => {
             }
           </form>
       </ul>
-      <ShowReviewsBtn selectedBook={selectedBook}/>
+      <DisplayCommentsBtn selectedBook={selectedBook}/>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
-import Reviews from './Reviews'
+import Comments from './Comments'
 
-export default function ShowReviewsBtn({selectedBook}) {
+export default function DisplayCommentsBtn({selectedBook}) {
 
     const [clicked, setClicked] = useState(false)
     
@@ -16,7 +16,7 @@ export default function ShowReviewsBtn({selectedBook}) {
   return (
     <>
       <button type='button' onClick={handleClick}>{clicked ? "Hide Comments" : "Show Comments" }</button>
-      {clicked ? <Reviews selectedBook={selectedBook} /> : null }
+      {clicked ? <Comments selectedBook={selectedBook} /> : null }
     </>
   )
 }
