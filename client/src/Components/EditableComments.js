@@ -1,31 +1,24 @@
 import React from 'react'
 
-export default function EditableComments({review, formatDateAndTime, toggleEdit, editableComment, handleEditFormChange}) {
+export default function EditableComments({editableComment, cancelEdit, handleEditFormChange}) {
 
 
 
-  if(editableComment.user_id === review.user_id) return (
+  return (
     <>
-       <tr>
-      <td>{review.username}</td>
-      <td>{formatDateAndTime}</td>
-    </tr>
-    <tr>
-      <td>
-      <>
+     <td>
              <input
             type='text'
             style={{width: "500px"}}
             defaultValue={editableComment.comment}
             onChange={handleEditFormChange}
           />
-          </>
       </td>
       <td>
         <button type='button'>SAVE</button> 
-        <button type='button' onClick={toggleEdit}>CANCEL</button>
+        <button type='button' onClick={cancelEdit}>CANCEL</button>
         </td>
-    </tr>
+
 
     </>
   )
