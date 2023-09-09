@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function EditableComments({editableComment, cancelEdit, handleEditFormChange}) {
 
-
+console.log("comment", editableComment)
 
   return (
     <>
@@ -15,11 +15,8 @@ export default function EditableComments({editableComment, cancelEdit, handleEdi
           />
       </td>
       <td>
-        <button type='button'>SAVE</button> 
         <button type='button' onClick={cancelEdit}>CANCEL</button>
         </td>
-
-
     </>
   )
 }

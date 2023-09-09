@@ -5,30 +5,7 @@ import ReadOnlyComments from './ReadOnlyComments'
 
 export default function Comments({selectedBook}) {
 
-
-
-const [reviewsList, setReviewsList] = useState([])
-
-
-// const toggleEdit = (e, review) => {
-//   e.preventDefault()
-
-//   if(isEditing === false) {
-//     //setIsEditing(true)
-
-//     const formValues = {
-//       id: review.id,
-//       comment: review.comment,
-//       user_id: review.user_id,
-//       book_id: selectedBook.id,
-//       created_at: selectedBook.created_at
-//     }
-//     setEditableComment(formValues)
-//   } else {
-//     setEditableComment({})
-//     //setIsEditing(false)
-//   }
-// }
+  const [reviewsList, setReviewsList] = useState([])
 
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
@@ -38,17 +15,9 @@ useEffect(() => {
 }, [selectedBook])
 
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-
-  fetch(`/books/{editableComment.book_id}/reviews/{editComment.id}`)
-}
 
   return (
     <>
-  <form onSubmit={handleSubmit}>
-    <table>
-      <tbody>
         {reviewsList?.map(review => {
             let options = {
               year: "numeric",
@@ -68,9 +37,6 @@ const handleSubmit = (e) => {
             )
         }
         )}
-      </tbody>
-    </table>
-  </form>
     </>
   )
 }

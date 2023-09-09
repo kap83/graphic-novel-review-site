@@ -25,7 +25,6 @@ export default function BookDetails() {
     reviews: []
   })
 
-  console.log("in BookDetails", selectedBook)
 
   const [isEditing, setIsEditing] = useState(false)
 
@@ -42,7 +41,7 @@ export default function BookDetails() {
 
 
 useEffect(() => {
-  const findBook = booksData.find(book => book.id === parseId)
+  const findBook = booksData?.find(book => book.id === parseId)
   setSelectedBook(findBook)
   setFormValues(findBook)
   // eslint-disable-next-line

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-    resources :books, only: [:index, :show, :create, :update, :destroy]
-    resources :reviews, only: [:index, :show, :update]
+    resources :books do
+      resources :reviews, only: [:update]
+    end
+    resources :reviews, only: [:index]
     resources :users, only: [:index]
   
 

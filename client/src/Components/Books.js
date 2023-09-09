@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom'
 export default function Books() {
 
   const {booksData} = useContext(BooksContext)
+
+  console.log(booksData)
   
   return (
     <div>

@@ -8,10 +8,13 @@ wrap_parameters format: []
 
     end 
 
-    def show
-        #looks like the review ids are all i need? really?????? 
-        byebug
+    def update
+        book = Book.find(params[:book_id])
+        review = book.reviews.find(params[:id])
+        review.update(params.permit([:comment]))
+        render json: review
     end
+
 
 
 end
