@@ -1,12 +1,16 @@
 import React, {useState, useContext} from 'react'
 import { UserContext } from '../Context/User'
+import { BooksContext } from '../Context/Books'
 import { useParams } from 'react-router-dom'
 // eslint-disable-next-line
 import EditableComments from './EditableComments'
 
 export default function ReadOnlyComments({review, formatDateAndTime}) {
 
+  //create a display btns fn w/ if/else statements
+
 const {currentUser} = useContext(UserContext)
+const {handleEditedBookReview} = useContext(BooksContext)
 
 const {id} = useParams()
 const parseId = parseInt(id)
@@ -59,7 +63,10 @@ const handleSubmit = (e) => {
     body: JSON.stringify(editableComment)
   })
   .then(res=> res.json())
-  .then(data => console.log("from handleSubmit", data))
+  .then(editedReview => handleEditedBookReview(editedReview))
+  setIsEditing(false)
+  setEditableComment("")
+  setShowSaveBtn(false)
 }
 
   return (
@@ -88,8 +95,10 @@ const handleSubmit = (e) => {
               currentUser.id === review.user_id ?   
                 <>
                   {
-                    showSaveBtn === true ? <td><button type='submit'>SUBMIT</button></td> 
-                    : 
+                    showSaveBtn === true ? 
+                    <td>
+                      <button type='submit'>SUBMIT</button>
+                      </td> : 
                     <td>
                       <button type='button' onClick={(e) => {
                       handleShowSaveBtn(e)
