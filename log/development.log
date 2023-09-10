@@ -44954,3 +44954,331 @@ Processing by UsersController#show as */*
 Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 972)
 
 
+Started GET "/books" for 127.0.0.1 at 2023-09-10 10:13:32 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-10 10:13:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 32ms (Views: 7.8ms | ActiveRecord: 4.9ms | Allocations: 11875)
+
+
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["book_id", 1], ["book_id", 3], ["book_id", 4], ["book_id", 9], ["book_id", 2], ["book_id", 6], ["book_id", 7], ["book_id", 8], ["book_id", 5]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.31ms)
+Completed 200 OK in 85ms (Views: 61.3ms | ActiveRecord: 14.3ms | Allocations: 33574)
+
+
+Started GET "/books" for 127.0.0.1 at 2023-09-10 10:19:44 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-10 10:19:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 22ms (Views: 2.6ms | ActiveRecord: 4.3ms | Allocations: 11870)
+
+
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["book_id", 1], ["book_id", 3], ["book_id", 4], ["book_id", 9], ["book_id", 2], ["book_id", 6], ["book_id", 7], ["book_id", 8], ["book_id", 5]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.64ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 6.8ms | Allocations: 30391)
+
+
+  
+NoMethodError (undefined method `username' for #<Review id: 1, comment: "Fantastic Read! Can't to get my hands on the next ...", user_id: 1, book_id: 1, created_at: "2023-09-09 23:18:19.046098000 +0000", updated_at: "2023-09-09 23:18:19.046098000 +0000">
+Did you mean?  user=):
+  
+app/controllers/books_controller.rb:8:in `index'
+Started GET "/books" for 127.0.0.1 at 2023-09-10 10:21:05 -0400
+Started GET "/me" for 127.0.0.1 at 2023-09-10 10:21:05 -0400
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Processing by UsersController#show as */*
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["book_id", 1], ["book_id", 3], ["book_id", 4], ["book_id", 9], ["book_id", 2], ["book_id", 6], ["book_id", 7], ["book_id", 8], ["book_id", 5]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 24ms (Views: 1.8ms | ActiveRecord: 6.4ms | Allocations: 7951)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.37ms)
+Completed 200 OK in 57ms (Views: 41.6ms | ActiveRecord: 10.7ms | Allocations: 22678)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-09-10 10:21:42 -0400
+Started GET "/books" for 127.0.0.1 at 2023-09-10 10:21:42 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1999)
+
+
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["book_id", 1], ["book_id", 3], ["book_id", 4], ["book_id", 9], ["book_id", 2], ["book_id", 6], ["book_id", 7], ["book_id", 8], ["book_id", 5]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.13ms)
+Completed 200 OK in 69ms (Views: 44.5ms | ActiveRecord: 14.2ms | Allocations: 29596)
+
+
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1 AND "reviews"."id" = $2 LIMIT $3[0m  [["book_id", 1], ["id", 1], ["LIMIT", 1]]
+Started GET "/books" for ::1 at 2023-09-10 10:27:10 -0400
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["book_id", 1], ["book_id", 3], ["book_id", 4], ["book_id", 9], ["book_id", 2], ["book_id", 6], ["book_id", 7], ["book_id", 8], ["book_id", 5]]
+  ↳ app/controllers/books_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/review_serializer.rb:9:in `username'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.57ms)
+Completed 200 OK in 40ms (Views: 25.4ms | ActiveRecord: 6.9ms | Allocations: 22335)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-09-10 10:27:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:29:15 -0400
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `find_review'
+Completed 404 Not Found in 40ms (ActiveRecord: 13.6ms | Allocations: 8901)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review without an ID):
+  
+app/controllers/reviews_controller.rb:28:in `find_review'
+app/controllers/reviews_controller.rb:12:in `create'
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:30:33 -0400
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `find_book'
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:33:19 -0400
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:29:in `find_book'
+[31mUnpermitted parameters: :user_id, :created_at, :book_id, :username. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ffaab1cf888>, params: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle", "controller"=>"reviews", "action"=>"create"} }[0m
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:35:41 -0400
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:33:in `find_book'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 8.8ms | Allocations: 10570)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'username' for Review.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/reviews_controller.rb:13:in `create'
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:36:09 -0400
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:33:in `find_book'
+[31mUnpermitted parameter: :username. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ffaaa714b00>, params: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle", "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mReview Create (2.8ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "Not Bad!"], ["user_id", 2], ["book_id", 9], ["created_at", "2023-09-05 19:26:42.222000"], ["updated_at", "2023-09-10 14:36:09.364776"]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 46826ms (ActiveRecord: 13.9ms | Allocations: 67696)
+
+
+  
+Errno::EIO (Input/output error - read):
+  
+app/controllers/reviews_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 382344ms (ActiveRecord: 8.2ms | Allocations: 95301)
+
+
+Completed 500 Internal Server Error in 216129ms (ActiveRecord: 13.4ms | Allocations: 112699)
+
+
+  
+Errno::EIO (Input/output error - read):
+  
+app/controllers/reviews_controller.rb:16:in `create'
+  
+Errno::EIO (Input/output error - read):
+  
+app/controllers/reviews_controller.rb:15:in `create'
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:37:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:33:in `find_book'
+[31mUnpermitted parameter: :username. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007f09eb31fc08>, params: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "username"=>"amethystoracle", "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "Not Bad!"], ["user_id", 2], ["book_id", 9], ["created_at", "2023-09-05 19:26:42.222000"], ["updated_at", "2023-09-10 14:37:28.612543"]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+Started POST "/books/9/reviews" for ::1 at 2023-09-10 10:38:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"Not Bad!", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:33:in `find_book'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "user_id", "book_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "Not Bad!"], ["user_id", 2], ["book_id", 9], ["created_at", "2023-09-05 19:26:42.222000"], ["updated_at", "2023-09-10 14:38:09.485833"]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Started POST "/books/9/reviews/8" for ::1 at 2023-09-10 10:41:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/books/9/reviews/8"):
+  
+Started PATCH "/books/9/reviews/8" for ::1 at 2023-09-10 10:41:15 -0400
+Processing by ReviewsController#update as */*
+  Parameters: {"comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "id"=>"8"}
+[31mUnpermitted parameter: :id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb2495e0>, params: {"comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update", "id"=>"8"} }[0m
+[31mUnpermitted parameters: :user_id, :created_at, :book_id, :id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb2495e0>, params: {"comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update", "id"=>"8"} }[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3524)
+
+
+  
+NoMethodError (undefined method `update' for #<ActionController::Parameters {"user_id"=>2, "book_id"=>"9", "created_at"=>"2023-09-05T19:26:42.222Z", "comment"=>"What a ride"} permitted: true>
+
+        review.update(params.permit([:comment]))
+              ^^^^^^^):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/books/9/reviews/8" for ::1 at 2023-09-10 10:42:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#update as */*
+  Parameters: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9"}
+[31mUnpermitted parameter: :id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb31ce40>, params: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update"} }[0m
+[31mUnpermitted parameters: :id, :user_id, :created_at, :book_id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb31ce40>, params: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update"} }[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3530)
+
+
+  
+NoMethodError (undefined method `update' for #<ActionController::Parameters {"user_id"=>2, "book_id"=>"9", "created_at"=>"2023-09-05T19:26:42.222Z", "comment"=>"What a ride"} permitted: true>
+
+        review.update(params.permit([:comment]))
+              ^^^^^^^):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/books/9/reviews/8" for ::1 at 2023-09-10 10:43:00 -0400
+Processing by ReviewsController#update as */*
+  Parameters: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9"}
+[31mUnpermitted parameter: :id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb309750>, params: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update"} }[0m
+[31mUnpermitted parameter: :id. Context: { controller: ReviewsController, action: update, request: #<ActionDispatch::Request:0x00007f09eb309750>, params: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9", "controller"=>"reviews", "action"=>"update"} }[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1370)
+
+
+  
+NoMethodError (undefined method `update' for #<ActionController::Parameters {"user_id"=>2, "book_id"=>"9", "created_at"=>"2023-09-05T19:26:42.222Z", "comment"=>"What a ride"} permitted: true>
+
+        review.update(review_params)
+              ^^^^^^^):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/books/9/reviews/8" for ::1 at 2023-09-10 10:43:58 -0400
+Processing by ReviewsController#update as */*
+  Parameters: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1220)
+
+
+  
+NoMethodError (undefined method `update' for #<ActionController::Parameters {"user_id"=>2, "id"=>"8", "book_id"=>"9", "created_at"=>"2023-09-05T19:26:42.222Z", "comment"=>"What a ride"} permitted: true>
+
+        review.update(review_params)
+              ^^^^^^^):
+  
+app/controllers/reviews_controller.rb:22:in `update'
+Started PATCH "/books/9/reviews/8" for ::1 at 2023-09-10 10:44:41 -0400
+Processing by ReviewsController#update as */*
+  Parameters: {"id"=>"8", "comment"=>"What a ride", "user_id"=>2, "created_at"=>"2023-09-05T19:26:42.222Z", "book_id"=>"9"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:37:in `find_review'
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1 AND "reviews"."id" = $2 LIMIT $3[0m  [["book_id", 9], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:37:in `find_review'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:22:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:22:in `update'
+  [1m[36mReview Update (0.6ms)[0m  [1m[33mUPDATE "reviews" SET "comment" = $1, "updated_at" = $2 WHERE "reviews"."id" = $3[0m  [["comment", "What a ride"], ["updated_at", "2023-09-10 14:44:41.211890"], ["id", 8]]
+  ↳ app/controllers/reviews_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:22:in `update'
+[active_model_serializers] Rendered ReviewSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 54ms (Views: 4.7ms | ActiveRecord: 13.8ms | Allocations: 28349)
+
+
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = $1 AND "reviews"."id" = $2 LIMIT $3[0m  [["book_id", 9], ["id", 8], ["LIMIT", 1]]

@@ -15,7 +15,7 @@ const parseId = parseInt(id)
 // eslint-disable-next-line
 const [newComment, setNewComment] = useState("")
 
-const handleSubmit = () => {
+const handleSubmit = (e) => {
   e.preventDefault()
     
     const formValues = {
@@ -31,7 +31,7 @@ const handleSubmit = () => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
       <table>
         <tbody>
           <tr>

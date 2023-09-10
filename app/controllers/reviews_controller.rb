@@ -8,13 +8,33 @@ wrap_parameters format: []
 
     end 
 
+    def create
+        book = find_book
+        review = book.reviews.create(review_params)
+        render json: review
+
+    end
+
+
     def update
-        book = Book.find(params[:book_id])
-        review = book.reviews.find(params[:id])
-        review.update(params.permit([:comment]))
+        review = find_review
+        review.update(review_params)
         render json: review
     end
 
+    private 
+
+    def review_params
+        params.permit(:user_id, :id, :book_id, :created_at, :comment)
+    end
+
+    def find_book
+        Book.find(params[:book_id])
+    end
+
+    def find_review
+        Book.find(params[:book_id]).reviews.find(params[:id])
+    end
 
 
 end

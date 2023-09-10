@@ -5,7 +5,7 @@ export const BooksContext = React.createContext();
 export function BookProvider({children}) {
     const [booksData, setBooksData] = useState([])
 
-    console.log("testing", booksData)
+
 
     useEffect(() => {
         fetch('/books')
