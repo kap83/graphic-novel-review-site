@@ -3,9 +3,12 @@ import React, {useState, useEffect} from 'react'
 import ReadOnlyComments from './ReadOnlyComments'
 
 
+
 export default function Comments({selectedBook}) {
 
   const [reviewsList, setReviewsList] = useState([])
+
+
 
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
@@ -18,7 +21,9 @@ useEffect(() => {
 
   return (
     <>
-        {reviewsList?.map(review => {
+     
+      
+      {reviewsList?.map(review => {
             let options = {
               year: "numeric",
               month: "long",

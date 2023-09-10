@@ -39,6 +39,8 @@ export default function BookDetails() {
     volume: ""
    })
 
+   const [clicked, setClicked] = useState(false)
+
 
 useEffect(() => {
   const findBook = booksData?.find(book => book.id === parseId)
@@ -74,6 +76,10 @@ const handleBookEditSubmit = (e) => {
   setIsEditing(false)
 }
 
+const handleClicked =() => {
+  setClicked(!clicked)
+}
+
   return (
     <div>
         <ul className='ulStyle'>
@@ -102,7 +108,8 @@ const handleBookEditSubmit = (e) => {
           </form>
       </ul>
       <DisplayCommentsBtn selectedBook={selectedBook}/>
-      <AddComments />
+      <button onClick={handleClicked}>ADD COMMENT</button> 
+      {clicked === true ? <AddComments /> : null }
     </div>
   )
 }
