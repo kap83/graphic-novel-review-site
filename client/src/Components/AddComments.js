@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom'
 import { UserContext } from '../Context/User'
 import { BooksContext } from '../Context/Books'
 
-export default function AddComments() {
+export default function AddComments({handleClicked}) {
 
 const {currentUser} = useContext(UserContext)
 // eslint-disable-next-line
-const {handleAddedBook} = useContext(BooksContext)
+const {handleNewReview} = useContext(BooksContext)
 
 const {id} = useParams()
 const parseId = parseInt(id)
@@ -24,7 +24,19 @@ const handleSubmit = (e) => {
       comment: newComment
     }
 
-    //JSON.stringify(formValues)
+
+    fetch(`/books/${parseId}/reviews`, {
+      method: 'POST',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify(formValues)
+    })
+    .then(res=> res.json())
+    .then(newReview => handleNewReview(newReview))
+
+    setNewComment("")
+    handleClicked(false)
+   
+
   
 }
 
@@ -47,7 +59,9 @@ const handleSubmit = (e) => {
             </td>
           </tr>
           <tr>
-            <button type='submit'>SUBMIT</button>
+            <td>
+              <button type='submit'>SUBMIT</button>
+            </td>
           </tr>
         </tbody>
       </table>

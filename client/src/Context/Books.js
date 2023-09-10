@@ -5,7 +5,7 @@ export const BooksContext = React.createContext();
 export function BookProvider({children}) {
     const [booksData, setBooksData] = useState([])
 
-
+    console.log("booksData", booksData)
 
     useEffect(() => {
         fetch('/books')
@@ -23,6 +23,11 @@ export function BookProvider({children}) {
         setBooksData(updatedBooksArr)
     }
 
+    const handleDeletedBook = (deletedBook) => {
+        const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
+        setBooksData(updatedBooksArr)
+    }
+
     const handleEditedBookReview = (editedReview) => {
         //map through booksData
         const updatedBookData = booksData.map(book => {
@@ -30,38 +35,42 @@ export function BookProvider({children}) {
            if (book.id === editedReview.book_id) {
             //create a variable that will hold all the reviews with ids that don't match the editedReview.id
             const updatedReviews = book.reviews.filter(review => review.id !== editedReview.id)
-            //push editedReview into updatedReviews
-            updatedReviews.push(editedReview)
-
             //make a copy of books w/the updated reviews
             return {
                 ...book,
-                reviews: updatedReviews
+                reviews: [...updatedReviews, editedReview]
             }
            }
-
            return book
-       
-           
-        }) 
-
-        setBooksData(updatedBookData)
-
+        })
         
-       
+        setBooksData(updatedBookData)
     }
 
-    const handleDeletedBook = (deletedBook) => {
-        const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
-        setBooksData(updatedBooksArr)
+    const handleNewReview = (newReview) => {
+        console.log("are all the ids there?", newReview)
+        const updatedBooksData = booksData.map(book => {
+                if(book.id === newReview.book_id) {
+                    const updatedReviews = Object.values(book.reviews).filter(review => review.id !== newReview.id)
+                    return {
+                        ...book,
+                    reviews: [...updatedReviews, newReview]
+                    }
+                }
+            return book
+        })
+        
+        setBooksData(updatedBooksData)
     }
+
 
     const booksValues ={
         booksData,
         setBooksData,
         handleEditedBook,
         handleDeletedBook,
-        handleEditedBookReview
+        handleEditedBookReview,
+        handleNewReview
     }
 
     return <BooksContext.Provider value={booksValues}>{children}</BooksContext.Provider>

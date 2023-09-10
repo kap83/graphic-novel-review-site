@@ -109,7 +109,7 @@ const handleClicked =() => {
       </ul>
       <DisplayCommentsBtn selectedBook={selectedBook}/>
       <button onClick={handleClicked}>ADD COMMENT</button> 
-      {clicked === true ? <AddComments /> : null }
+      {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
     </div>
   )
 }
