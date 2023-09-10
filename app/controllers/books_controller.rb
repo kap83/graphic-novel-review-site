@@ -2,7 +2,6 @@ class BooksController < ApplicationController
 
    wrap_parameters format: []
 
-
     def index
        book = Book.all.order(title: 'asc')
        render json: book.includes(:reviews)
@@ -27,23 +26,16 @@ class BooksController < ApplicationController
     end
 
     def update 
-      book = find_book
-      if book.valid?
+         book = find_book
          book.update(book_params)
          render json: book
-      else
-         render json: {error: book.errors}, status: :not_modified
-      end
     end
 
     def destroy
       book = find_book
-      if book
-         book.destroy
-         head :no_content
-      else
-         render json: { error: book.errors }, status: not_found
-      end
+      book.destroy
+      head :no_content
+     
     end
 
 private 

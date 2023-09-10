@@ -8,6 +8,7 @@ export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState({});
   const [notLoggedInError, setNotLoggedInError] = useState('')
 
+  console.log(notLoggedInError)
 
   useEffect(()=> {
     fetch("/me").then(res=> {
@@ -20,6 +21,7 @@ export function UserProvider({ children }) {
       } else {
         res.json()
         .then(data => {
+          
           setNotLoggedInError(data.error)
         })
       }

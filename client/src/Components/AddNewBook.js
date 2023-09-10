@@ -59,7 +59,6 @@ const {setBooksData} = useContext(BooksContext)
               const errorMsg = error[1]
               return ` ${field}: ` + ` ${errorMsg}` 
             })
-
             alert(message)
           })
         }
@@ -112,7 +111,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='genre'
             value={genre}
-            required
             onChange={(e) => setGenre(e.target.value)}
           />
         </label>
@@ -124,7 +122,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='publisher'
             value={publisher}
-    
             onChange={(e) => setPublisher(e.target.value)}
           />
         </label>
@@ -136,7 +133,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='volume'
             value={volume}
-            required
             onChange={(e) => setVolume(e.target.value)}
           />
         </label>

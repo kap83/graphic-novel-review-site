@@ -15,7 +15,6 @@ wrap_parameters format: []
 
     end
 
-
     def update
         review = find_review
         review.update(review_params)
