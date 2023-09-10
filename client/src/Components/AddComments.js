@@ -13,11 +13,20 @@ const {id} = useParams()
 const parseId = parseInt(id)
 
 // eslint-disable-next-line
-const [newReview, setNewReview] = useState({
-  comment: "",
-  user_id: currentUser.id,
-  book_id: parseId
-})
+const [newComment, setNewComment] = useState("")
+
+const handleSubmit = () => {
+  e.preventDefault()
+    
+    const formValues = {
+      user_id: currentUser.id,
+      book_id: parseId,
+      comment: newComment
+    }
+
+    //JSON.stringify(formValues)
+  
+}
 
 
   return (
@@ -33,6 +42,7 @@ const [newReview, setNewReview] = useState({
               comment: 
               <input 
                 type='text'
+                onChange={(e) => setNewComment(e.target.value)}
               />
             </td>
           </tr>

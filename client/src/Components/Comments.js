@@ -2,13 +2,9 @@ import React, {useState, useEffect} from 'react'
 //import EditableComments from './EditableComments'
 import ReadOnlyComments from './ReadOnlyComments'
 
-
-
 export default function Comments({selectedBook}) {
 
-  const [reviewsList, setReviewsList] = useState([])
-
-
+const [reviewsList, setReviewsList] = useState([])
 
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
@@ -16,7 +12,6 @@ useEffect(() => {
     setReviewsList(selectedBook.reviews)
   }
 }, [selectedBook])
-
 
 
   return (
