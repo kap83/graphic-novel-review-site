@@ -25,7 +25,6 @@ export default function BookDetails() {
     reviews: []
   })
 
-
   const [isEditing, setIsEditing] = useState(false)
 
   const [formValues, setFormValues] = useState({

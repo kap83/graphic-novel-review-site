@@ -10,7 +10,11 @@ class BooksController < ApplicationController
 
     def show 
       book = find_book
-      render json: book
+      if book
+         render json: book
+      else
+         render json: {errors: "Book not Found"}, status: :not_found
+      end
     end
 
     def create
@@ -18,7 +22,7 @@ class BooksController < ApplicationController
       if book.valid?
          render json: book, status: :created
       else
-         render json: {errors: [books.errors]}, status: :unprocessable_entity
+         render json: {errors: book.errors}, status: :unprocessable_entity
       end
     end
 
@@ -28,18 +32,17 @@ class BooksController < ApplicationController
          book.update(book_params)
          render json: book
       else
-         render json: {error: [books.errors]}, status: :not_modified
+         render json: {error: book.errors}, status: :not_modified
       end
     end
 
     def destroy
       book = find_book
-
       if book
          book.destroy
          head :no_content
       else
-         render json: { error: ["Book not Found"] }, status: not_found
+         render json: { error: book.errors }, status: not_found
       end
     end
 

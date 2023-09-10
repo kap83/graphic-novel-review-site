@@ -13,15 +13,11 @@ const {setBooksData} = useContext(BooksContext)
     const [genre, setGenre] = useState('')
     const [publisher, setPublisher] = useState('')
     const [volume, setVolume] = useState('')
-    const [coverURL, setCoverURL] = useState('')
+    const [cover_url, setCover_url] = useState('')
     const [userID, setUserID] = useState("") 
-    const [checked, setChecked] = useState(false)
+ 
   
-    const handleCheckbox = () => {
-      setChecked(!checked)
-      setUserID(checked === true ? null : currentUser.id)
-    }
-
+  
     const handleSubmit = (e) => {
       e.preventDefault()
       const values = {
@@ -31,7 +27,7 @@ const {setBooksData} = useContext(BooksContext)
        genre: genre,
        publisher: publisher,
        volume: volume,
-       cover_url: coverURL,
+       cover_url: cover_url,
        user_id: userID
       }
 
@@ -40,20 +36,35 @@ const {setBooksData} = useContext(BooksContext)
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(values)
       })
-      .then(res => res.json())
-      .then(updatedBookData => {
-        setBooksData(prevBooksData => [...prevBooksData, updatedBookData])
-      })
+      .then(res => {
+        if(res.ok) {
+          res.json()
+          .then(data => {
+            setBooksData(prevBooksData => [...prevBooksData, data])
+            setTitle("")
+            setAuthor("")
+            setArtist("")
+            setGenre("")
+            setPublisher("")
+            setVolume("")
+            setCover_url("")
+            setUserID("")
+          })
+        }
+        else {
+          res.json()
+          .then(data => {
+            const message = Object.entries(data.errors).map(error => {
+              const field = error[0]
+              const errorMsg = error[1]
+              return ` ${field}: ` + ` ${errorMsg}` 
+            })
 
-      setTitle("")
-      setAuthor("")
-      setArtist("")
-      setGenre("")
-      setPublisher("")
-      setVolume("")
-      setCoverURL("")
-      setUserID("")
-      setChecked("")
+            alert(message)
+          })
+        }
+      }) 
+        
     }
 
   return (
@@ -68,7 +79,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='title'
             value={title}
-            required
             onChange={(e) => setTitle(e.target.value)}
           />
         </label>
@@ -80,7 +90,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='author'
             value={author}
-            required
             onChange={(e) => setAuthor(e.target.value)}
           />
         </label>
@@ -92,7 +101,6 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='artist'
             value={artist}
-            required
             onChange={(e) => setArtist(e.target.value)}
           />
         </label>
@@ -116,7 +124,7 @@ const {setBooksData} = useContext(BooksContext)
             type='text'
             name='publisher'
             value={publisher}
-            required
+    
             onChange={(e) => setPublisher(e.target.value)}
           />
         </label>
@@ -137,21 +145,10 @@ const {setBooksData} = useContext(BooksContext)
         <label> Cover URL: 
           <input
             type='url'
-            name='coverURL'
-            value={coverURL}
-            required
-            onChange={(e) => setCoverURL(e.target.value)}
+            name='cover_url'
+            value={cover_url}
+            onChange={(e) => setCover_url(e.target.value)}
           />
-          <br />
-          <br />
-          <label>
-            Check box if you would like to add this book to your favorites list
-            <input 
-              type='checkbox'
-              value={checked}
-              onChange={handleCheckbox}
-            />
-          </label>
           <br />
           <br />
           <button type='submit'>ADD</button>
