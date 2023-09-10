@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :books do
       resources :reviews, only: [:update, :create]
     end
-    resources :reviews, only: [:index]
+    resources :reviews, only: [:index, :destroy]
     resources :users, only: [:index]
   
 

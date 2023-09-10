@@ -10,7 +10,7 @@ export default function ReadOnlyComments({review, formatDateAndTime}) {
   //create a display btns fn w/ if/else statements
 
 const {currentUser} = useContext(UserContext)
-const {handleEditedBookReview} = useContext(BooksContext)
+const {handleEditedBookReview, handleDeletedReview} = useContext(BooksContext)
 
 const {id} = useParams()
 const parseId = parseInt(id)
@@ -69,6 +69,13 @@ const handleSubmit = (e) => {
   setShowSaveBtn(false)
 }
 
+function handleDelete() {
+    fetch(`/reviews/${review.id}`, {
+      method: "DELETE",
+    })
+    .then(handleDeletedReview(review))
+}
+
   return (
     <>
     <form onSubmit={handleSubmit}>
@@ -106,7 +113,7 @@ const handleSubmit = (e) => {
                     }}>EDIT COMMENT</button></td>
                   }
                   <td>
-                    <button>DELETE COMMENT</button>
+                    <button type='button' onClick={handleDelete}>DELETE COMMENT</button>
                   </td>
                 </>
                     : null

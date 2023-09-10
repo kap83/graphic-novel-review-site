@@ -5,8 +5,6 @@ export const BooksContext = React.createContext();
 export function BookProvider({children}) {
     const [booksData, setBooksData] = useState([])
 
-    console.log("booksData", booksData)
-
     useEffect(() => {
         fetch('/books')
         .then(res => res.json())
@@ -48,7 +46,6 @@ export function BookProvider({children}) {
     }
 
     const handleNewReview = (newReview) => {
-        console.log("are all the ids there?", newReview)
         const updatedBooksData = booksData.map(book => {
                 if(book.id === newReview.book_id) {
                     const updatedReviews = Object.values(book.reviews).filter(review => review.id !== newReview.id)
@@ -63,6 +60,20 @@ export function BookProvider({children}) {
         setBooksData(updatedBooksData)
     }
 
+    const handleDeletedReview = (deletedReview) => {
+        const updatedBooksData = booksData.map(book => {
+            if(book.id === deletedReview.book_id) {
+                const updatedReviews = book.reviews.filter(review => review.id !== deletedReview.id)
+                return {
+                    ...book,
+                    reviews: updatedReviews
+                }
+            }
+            return book
+        })
+        setBooksData(updatedBooksData)
+    }
+
 
     const booksValues ={
         booksData,
@@ -70,7 +81,8 @@ export function BookProvider({children}) {
         handleEditedBook,
         handleDeletedBook,
         handleEditedBookReview,
-        handleNewReview
+        handleNewReview,
+        handleDeletedReview
     }
 
     return <BooksContext.Provider value={booksValues}>{children}</BooksContext.Provider>

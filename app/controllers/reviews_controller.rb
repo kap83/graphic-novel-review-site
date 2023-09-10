@@ -22,6 +22,12 @@ wrap_parameters format: []
         render json: review
     end
 
+    def destroy
+        review = Review.find(params[:id])
+        review.destroy
+        head :no_content
+    end
+
     private 
 
     def review_params
