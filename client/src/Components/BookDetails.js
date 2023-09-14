@@ -18,8 +18,6 @@ export default function BookDetails() {
     title: "",
     author: "",
     artist: "",
-    genre: "",
-    publisher: "",
     volume: "",
     cover_url: "",
     reviews: []
@@ -33,8 +31,6 @@ export default function BookDetails() {
     title: "",
     author: "",
     artist: "",
-    genre: "",
-    publisher: "",
     volume: ""
    })
 

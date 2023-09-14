@@ -43,24 +43,6 @@ export default function EditableBookDetails({handleEditToggleClick, handleEditFo
       />
       </li>
       <li>
-        GENRE:
-        <input 
-           type='text'
-           name='genre'
-           defaultValue={selectedBook.genre}
-           onChange={handleEditFormChange}
-      />
-      </li>
-      <li>
-        PUBLISHER:
-        <input 
-             type='text'
-             name='publisher'
-             defaultValue={selectedBook.publisher}
-             onChange={handleEditFormChange}
-      />
-      </li>
-      <li>
         VOLUME:
         <input 
             type='text'

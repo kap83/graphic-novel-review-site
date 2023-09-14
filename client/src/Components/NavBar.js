@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 export default function NavBar() {
 
   // eslint-disable-next-line
-  const {handleLogout, loggedIn} = useContext(UserContext)
+  const {handleLogout} = useContext(UserContext)
 
 const linkStyle = {
     color: "white"
@@ -19,12 +19,18 @@ return (
         to="/"
         style={linkStyle}
         >
-          Profile
+          PROFILE
       </NavLink>
       <NavLink
         to="/books"
           style={linkStyle}>
-            Books
+            BOOKS
+      </NavLink>
+      <NavLink
+        to="/addbook"
+        style={linkStyle}
+      >
+        ADD BOOKS
       </NavLink>
     <button onClick={handleLogout}>LOGOUT</button>
     </div>

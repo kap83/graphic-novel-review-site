@@ -1,31 +1,23 @@
 import React, {useState, useContext} from 'react'
-import { UserContext  } from '../Context/User'
 import { BooksContext } from '../Context/Books'
 import { Link } from 'react-router-dom'
 
 export default function AddNewBook() {
-const {currentUser} = useContext(UserContext)
 const {setBooksData} = useContext(BooksContext)
 
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const [artist, setArtist] = useState('')
-    const [genre, setGenre] = useState('')
-    const [publisher, setPublisher] = useState('')
     const [volume, setVolume] = useState('')
     const [cover_url, setCover_url] = useState('')
     const [userID, setUserID] = useState("") 
  
-  
-  
     const handleSubmit = (e) => {
       e.preventDefault()
       const values = {
        title: title,
        author: author,
        artist: artist,
-       genre: genre,
-       publisher: publisher,
        volume: volume,
        cover_url: cover_url,
        user_id: userID
@@ -44,8 +36,6 @@ const {setBooksData} = useContext(BooksContext)
             setTitle("")
             setAuthor("")
             setArtist("")
-            setGenre("")
-            setPublisher("")
             setVolume("")
             setCover_url("")
             setUserID("")
@@ -57,6 +47,7 @@ const {setBooksData} = useContext(BooksContext)
             const message = Object.entries(data.errors).map(error => {
               const field = error[0]
               const errorMsg = error[1]
+              // eslint-disable-next-line
               return ` ${field}: ` + ` ${errorMsg}` 
             })
             alert(message)
@@ -101,28 +92,6 @@ const {setBooksData} = useContext(BooksContext)
             name='artist'
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          GENRE: 
-          <input
-            type='text'
-            name='genre'
-            value={genre}
-            onChange={(e) => setGenre(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          PUBLISHER: 
-          <input
-            type='text'
-            name='publisher'
-            value={publisher}
-            onChange={(e) => setPublisher(e.target.value)}
           />
         </label>
         <br />

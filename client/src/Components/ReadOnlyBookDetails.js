@@ -26,8 +26,6 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
       <li>TITLE: {selectedBook.title}</li>
       <li>AUTHOR: {selectedBook.author}</li>
       <li>ARTIST: {selectedBook.artist}</li>
-      <li>GENRE: {selectedBook.genre}</li>
-      <li>PUBLISHER: {selectedBook.publisher}</li>
       <li>VOL: {selectedBook.volume}</li>
     </div>
     <div>

@@ -36,7 +36,6 @@ const handleSubmit = (e) => {
     setNewComment("")
     handleClicked(false)
    
-
   
 }
 
