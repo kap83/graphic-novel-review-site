@@ -11,7 +11,7 @@ export function UserProvider({ children }) {
   console.log(notLoggedInError)
 
   useEffect(()=> {
-    fetch("/me").then(res=> {
+    fetch("/auth").then(res=> {
       if (res.ok) {
         res.json()
         .then(data => {

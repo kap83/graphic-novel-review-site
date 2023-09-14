@@ -62,7 +62,7 @@ h3 {
 .sign-in-register-page {
   box-sizing: border-box;
   position: relative;
-  background-image: url('./images/for_login_register2.jpg');
+  background-image: url('./images/for_login_register3.png');
   background-size: cover;
   width: 100%;
   height: 100vh
@@ -77,8 +77,8 @@ h3 {
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  background-color: rgba(255,165,0, 0.3);
-  border: 2px solid white;
+  background-color: rgba(250, 249, 246, 0.5);
+  border: 2px solid black;
   border-radius: 12px;
   font-size: small;
 }
