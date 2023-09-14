@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
    wrap_parameters format: []
+   before_action :authorized
 
     def index
        book = Book.all.order(title: 'asc')

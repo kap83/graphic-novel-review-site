@@ -12,11 +12,11 @@ const linkStyle = {
 }
 
 
-if (loggedIn) return (
+return (
     <> 
     <div className="navBar">
     <NavLink
-        to="/profile"
+        to="/"
         style={linkStyle}
         >
           Profile
@@ -28,7 +28,6 @@ if (loggedIn) return (
       </NavLink>
     <button onClick={handleLogout}>LOGOUT</button>
     </div>
-  
     </>
   )
 }

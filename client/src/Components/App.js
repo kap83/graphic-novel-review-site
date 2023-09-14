@@ -13,20 +13,19 @@ import BookDetails from './BookDetails';
 function App() {
 
   const {loggedIn} = useContext(UserContext)
-
-  
   
   if (!loggedIn) return <ToggleLogin /> 
+
   return (
     <div className="App">
       <NavBar />
-      <Routes>
-        <Route path='/profile' element={<Profile />} /> 
+      <Routes> 
         <Route path='/login' element={<ToggleLogin />} /> 
         <Route path='/books' element={<Books />} /> 
         <Route path='/books/:id' element={<BookDetails />} />
         <Route path='/addbook' element={<AddNewBook />} />
         <Route path='register' element={<Register />} /> 
+        <Route path='/' element={<Profile />} />
       </Routes>
     </div>
   );
