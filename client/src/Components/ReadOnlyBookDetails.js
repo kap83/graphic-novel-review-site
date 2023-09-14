@@ -18,8 +18,6 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
       
   }
 
-  
-
   return (
     <>
     

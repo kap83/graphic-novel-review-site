@@ -108,7 +108,7 @@ const handleClicked =() => {
           </table>
           </form>
           <DisplayCommentsBtn selectedBook={selectedBook}/>
-        <button onClick={handleClicked}>ADD COMMENT</button> 
+        <button onClick={handleClicked}>{clicked === true ? "FORGET IT" : "ADD COMMENT"}</button> 
         {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
     </div>
   </>
