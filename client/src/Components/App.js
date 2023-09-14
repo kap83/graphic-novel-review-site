@@ -9,7 +9,6 @@ import Register from './Register';
 import AddNewBook from './AddNewBook';
 import BookDetails from './BookDetails';
 
-
 function App() {
 
   const {loggedIn} = useContext(UserContext)

@@ -21,20 +21,46 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
   
 
   return (
-    <>    
-    <div className='liStyle'>
-      <li>TITLE: {selectedBook.title}</li>
-      <li>AUTHOR: {selectedBook.author}</li>
-      <li>ARTIST: {selectedBook.artist}</li>
-      <li>VOL: {selectedBook.volume}</li>
-    </div>
-    <div>
-      <li>
-        <button type='button' onClick={handleEditToggleClick}>EDIT</button>
-        <button type='button' onClick={handleDeleteClick}>DELETE</button>
-      </li>
-    </div> 
+    <>
     
-</>
+     <tr>
+      <td>
+        TITLE: 
+      </td>
+        <td>
+          {selectedBook.title}
+        </td>
+     </tr>
+     <tr>
+      <td>
+        AUTHOR:
+      </td>
+      <td>
+        {selectedBook.author}
+      </td>
+     </tr>
+     <tr>
+      <td>
+        ARTIST:
+      </td>
+      <td>
+        {selectedBook.artist}
+      </td>
+     </tr>
+     <tr>
+      <td>
+        VOLUME: 
+      </td>
+      <td>
+      {selectedBook.volume}
+      </td>
+     </tr>
+     <tr>
+        <td>
+          <button type='button' onClick={handleEditToggleClick}>EDIT</button>
+          <button type='button' onClick={handleDeleteClick}>DELETE</button>
+        </td>
+      </tr>
+    </>
   )
 }

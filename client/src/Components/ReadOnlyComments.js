@@ -7,7 +7,6 @@ import EditableComments from './EditableComments'
 
 export default function ReadOnlyComments({review, formatDateAndTime}) {
 
-  //create a display btns fn w/ if/else statements
 
 const {currentUser} = useContext(UserContext)
 const {handleEditedBookReview, handleDeletedReview} = useContext(BooksContext)
@@ -16,7 +15,7 @@ const {id} = useParams()
 const parseId = parseInt(id)
 
 const [isEditing, setIsEditing] = useState(false)
-const [showSaveBtn, setShowSaveBtn] = useState(false) 
+const [showSubmitBtn, setShowSubmitBtn] = useState(false) 
 const [editableComment, setEditableComment] = useState({
   id: "",
   comment: "",
@@ -24,8 +23,8 @@ const [editableComment, setEditableComment] = useState({
   created_at: " "
 })
 
-const handleShowSaveBtn = () => {
-    setShowSaveBtn(true)
+const handleSubmitSBtn = () => {
+    setShowSubmitBtn(true)
 }
 
 const toggleEdit = (e, review) => {
@@ -43,7 +42,7 @@ const toggleEdit = (e, review) => {
 const cancelEdit = () => {
   setIsEditing(false)
   setEditableComment("")
-  setShowSaveBtn(false)
+  setShowSubmitBtn(false)
 }
 
 const handleEditFormChange =(e) => {
@@ -66,7 +65,7 @@ const handleSubmit = (e) => {
   .then(editedReview => handleEditedBookReview(editedReview))
   setIsEditing(false)
   setEditableComment("")
-  setShowSaveBtn(false)
+  setShowSubmitBtn(false)
 }
 
 function handleDelete() {
@@ -102,17 +101,17 @@ function handleDelete() {
               currentUser.id === review.user_id ?   
                 <>
                   {
-                    showSaveBtn === true ? 
+                    showSubmitBtn === true ? 
                     <td>
                       <button type='submit'>SUBMIT</button>
-                      </td> : 
+                    </td> : 
                     <td>
                       <button type='button' onClick={(e) => {
-                      handleShowSaveBtn(e)
+                      handleSubmitSBtn(e)
                       toggleEdit(e, review)
                     }}>EDIT COMMENT</button></td>
                   }
-                  <td>
+                   <td>
                     <button type='button' onClick={handleDelete}>DELETE COMMENT</button>
                   </td>
                 </>

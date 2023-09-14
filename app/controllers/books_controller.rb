@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
    wrap_parameters format: []
-   before_action :authorized
+   
 
     def index
        book = Book.all.order(title: 'asc')
@@ -22,6 +22,7 @@ class BooksController < ApplicationController
       if book.valid?
          render json: book, status: :created
       else
+         #book.errors.full_messages - so you dont have to the concat in the front end
          render json: {errors: book.errors}, status: :unprocessable_entity
       end
     end

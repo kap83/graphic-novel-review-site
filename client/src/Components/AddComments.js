@@ -6,13 +6,11 @@ import { BooksContext } from '../Context/Books'
 export default function AddComments({handleClicked}) {
 
 const {currentUser} = useContext(UserContext)
-// eslint-disable-next-line
+
 const {handleNewReview} = useContext(BooksContext)
 
 const {id} = useParams()
 const parseId = parseInt(id)
-
-// eslint-disable-next-line
 const [newComment, setNewComment] = useState("")
 
 const handleSubmit = (e) => {
@@ -23,7 +21,6 @@ const handleSubmit = (e) => {
       book_id: parseId,
       comment: newComment
     }
-
 
     fetch(`/books/${parseId}/reviews`, {
       method: 'POST',
@@ -36,7 +33,6 @@ const handleSubmit = (e) => {
     setNewComment("")
     handleClicked(false)
    
-  
 }
 
 

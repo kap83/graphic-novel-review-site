@@ -16,8 +16,6 @@ useEffect(() => {
 
   return (
     <>
-     
-      
       {reviewsList?.map(review => {
             let options = {
               year: "numeric",

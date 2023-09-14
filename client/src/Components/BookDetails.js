@@ -76,21 +76,25 @@ const handleClicked =() => {
 }
 
   return (
-    <div>
-        <ul className='ulStyle'>
-        <li>
-            <img 
+  <>
+       <div>
+       <img 
+              style={{paddingLeft: "30%", marginTop: "20%" }}
               src={selectedBook.cover_url}  
               alt={selectedBook.title} 
             />
-          </li>
+      </div>
+        <div>
           <form   
-          onSubmit={handleBookEditSubmit}>
-          {isEditing ? (
-              <EditableBookDetails 
-                selectedBook={selectedBook} 
-                handleEditFormChange={handleEditFormChange}
-                handleEditToggleClick={handleEditToggleClick}
+            onSubmit={handleBookEditSubmit}
+            >
+          <table>  
+            <tbody>
+              {isEditing ? (
+                <EditableBookDetails 
+                  selectedBook={selectedBook} 
+                  handleEditFormChange={handleEditFormChange}
+                  handleEditToggleClick={handleEditToggleClick}
                 />) : 
                 (
                 <ReadOnlyBookDetails 
@@ -98,13 +102,15 @@ const handleClicked =() => {
                   parseId={parseId}
                   handleEditToggleClick={handleEditToggleClick}
                   />
-              )
-            }
+                )
+              }
+            </tbody>
+          </table>
           </form>
-      </ul>
-      <DisplayCommentsBtn selectedBook={selectedBook}/>
-      <button onClick={handleClicked}>ADD COMMENT</button> 
-      {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
+          <DisplayCommentsBtn selectedBook={selectedBook}/>
+        <button onClick={handleClicked}>ADD COMMENT</button> 
+        {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
     </div>
+  </>
   )
 }

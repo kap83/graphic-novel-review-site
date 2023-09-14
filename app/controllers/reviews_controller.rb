@@ -9,8 +9,7 @@ wrap_parameters format: []
     end 
 
     def create
-        book = find_book
-        review = book.reviews.create(review_params)
+        review = current_user.reviews.create(review_params)
         render json: review
 
     end
@@ -30,7 +29,11 @@ wrap_parameters format: []
     private 
 
     def review_params
-        params.permit(:user_id, :id, :book_id, :created_at, :comment)
+        params.permit(:book_id, :created_at, :comment)
+    end
+
+    def current_user
+       User.find(session[:user_id])
     end
 
     def find_book
@@ -38,7 +41,7 @@ wrap_parameters format: []
     end
 
     def find_review
-        Book.find(params[:book_id]).reviews.find(params[:id])
+        current_user.reviews.find(params[:id])
     end
 
 

@@ -8,6 +8,8 @@ export default function Books() {
 
   const {booksData} = useContext(BooksContext)
 
+  console.log(booksData)
+
   return (
     <div>
       {booksData?.map(book => 

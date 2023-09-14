@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react'
 import { BooksContext } from '../Context/Books'
-import { Link } from 'react-router-dom'
 
 export default function AddNewBook() {
 const {setBooksData} = useContext(BooksContext)
@@ -59,65 +58,77 @@ const {setBooksData} = useContext(BooksContext)
 
   return (
     <div>
-      <Link style={{textAlign: "center"}} to={'/books'}>
-      <p >Back To Books</p>
-      </Link>
       <form onSubmit={handleSubmit}>
-        <label>
-          TITLE: 
-          <input
-            type='text'
-            name='title'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          AUTHOR: 
-          <input
-            type='text'
-            name='author'
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          ARTIST: 
-          <input
-            type='text'
-            name='artist'
-            value={artist}
-            onChange={(e) => setArtist(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          VOLUME: 
-          <input
-            type='text'
-            name='volume'
-            value={volume}
-            onChange={(e) => setVolume(e.target.value)}
-          />
-        </label>
-        <br />
-        <br />
-        <label> Cover URL: 
-          <input
-            type='url'
-            name='cover_url'
-            value={cover_url}
-            onChange={(e) => setCover_url(e.target.value)}
-          />
-          <br />
-          <br />
-          <button type='submit'>ADD</button>
-        </label>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              TITLE: 
+            </td>
+            <td>
+              <input
+                type='text'
+                name='title'
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              AUTHOR: 
+            </td>
+            <td>
+              <input
+                type='text'
+                name='author'
+                value={author}
+                onChange={(e) => setAuthor(e.target.value)}
+               />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            ARTIST:
+            </td>
+            <td>
+              <input
+              type='text'
+              name='artist'
+              value={artist}
+              onChange={(e) => setArtist(e.target.value)}
+            />
+            </td>
+          </tr>  
+          <tr>
+            <td>
+              VOLUME: 
+            </td>
+            <td>
+              <input
+                type='text'
+                name='volume'
+                value={volume}
+                onChange={(e) => setVolume(e.target.value)}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            Cover URL:
+            </td>
+            <td>
+            <input
+              type='url'
+              name='cover_url'
+              value={cover_url}
+              onChange={(e) => setCover_url(e.target.value)}
+            />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type='submit'>ADD</button>
       </form>
     </div>
   )
