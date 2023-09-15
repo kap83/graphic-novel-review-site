@@ -77,18 +77,22 @@ const handleClicked =() => {
 
   return (
   <>
-       <div>
+    <div 
+      style={{padding: "20%"}}
+    >
+    <div className='one'
+        style={{float: "left"}}
+       >
        <img 
-              style={{paddingLeft: "30%", marginTop: "20%" }}
               src={selectedBook.cover_url}  
               alt={selectedBook.title} 
             />
       </div>
-        <div>
+        <div className='two'>
           <form   
             onSubmit={handleBookEditSubmit}
             >
-          <table>  
+          <table style={{float: "left", border: "solid green 2px"}}>  
             <tbody>
               {isEditing ? (
                 <EditableBookDetails 
@@ -107,7 +111,10 @@ const handleClicked =() => {
             </tbody>
           </table>
           </form>
-          <DisplayCommentsBtn selectedBook={selectedBook}/>
+    </div>
+    </div>
+    <div>
+    <DisplayCommentsBtn selectedBook={selectedBook}/>
         <button onClick={handleClicked}>{clicked === true ? "FORGET IT" : "ADD COMMENT"}</button> 
         {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
     </div>
