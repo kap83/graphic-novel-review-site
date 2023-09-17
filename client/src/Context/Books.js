@@ -41,23 +41,34 @@ export function BookProvider({children}) {
     }
 
     const handleEditedBookReview = (editedReview) => {
-        //map through booksData
-        const updatedBookData = booksData.map(book => {
-            //if the book.id matches editedReview.book_id
-           if (book.id === editedReview.book_id) {
-            //create a variable that will hold all the reviews with ids that don't match the editedReview.id
-            const updatedReviews = book.reviews.filter(review => review.id !== editedReview.id)
-            //make a copy of books w/the updated reviews
+        // Map through booksData
+        const updatedBookData = booksData?.map((book) => {
+          // If the book.id matches editedReview.book_id
+          if (book.id === editedReview.book_id) {
+            // Create an updated user_review_details array with the edited review
+            const updatedReviews = book.user_review_details.map((review) => {
+              if (review.review_id === editedReview.id) {
+                // Update the review with the edited data
+                return {
+                  ...review,
+                  comment: editedReview.comment,
+                  created_at: editedReview.created_at,
+                };
+              }
+              return review;
+            });
+            // Make a copy of the book with the updated user_review_details
             return {
-                ...book,
-                reviews: [...updatedReviews, editedReview]
-            }
-           }
-           return book
-        })
+              ...book,
+              user_review_details: updatedReviews,
+            };
+          }
+          return book;
+        });
         
+  
         setBooksData(updatedBookData)
-    }
+      };
 
     const handleNewReview = (newReview) => {
         const updatedBooksData = booksData.map(book => {

@@ -29,16 +29,13 @@ wrap_parameters format: []
     private 
 
     def review_params
-        params.permit(:book_id, :created_at, :comment)
+        params.permit(:book_id, :created_at, :comment, :user_review_details)
     end
 
     def current_user
        User.find(session[:user_id])
     end
 
-    def find_book
-        Book.find(params[:book_id])
-    end
 
     def find_review
         current_user.reviews.find(params[:id])

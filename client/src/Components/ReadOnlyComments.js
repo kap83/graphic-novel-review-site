@@ -31,7 +31,7 @@ const toggleEdit = (e, review) => {
   e.preventDefault()
   setIsEditing(true)
   const formValues = {
-    id: review.id,
+    id: review.review_id,
     comment: review.comment,
     user_id: review.user_id,
     created_at: review.created_at
@@ -62,14 +62,17 @@ const handleSubmit = (e) => {
     body: JSON.stringify(editableComment)
   })
   .then(res=> res.json())
-  .then(editedReview => handleEditedBookReview(editedReview))
+  .then(editedReview => {
+    console.log("in fetch", editedReview)
+    handleEditedBookReview(editedReview)
+  })
   setIsEditing(false)
   setEditableComment("")
   setShowSubmitBtn(false)
 }
 
 function handleDelete() {
-    fetch(`/reviews/${review.id}`, {
+    fetch(`/reviews/${review.review_id}`, {
       method: "DELETE",
     })
     .then(handleDeletedReview(review))

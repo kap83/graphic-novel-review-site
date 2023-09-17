@@ -9,6 +9,7 @@ def user_review_details
     user_data << {
        username: user.username,
        user_id: user.id,
+       review_id: review.id,
        comment: review.comment,
        created_at: review.created_at
     }

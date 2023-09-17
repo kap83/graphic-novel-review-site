@@ -21,6 +21,7 @@ console.log("comments", reviewsList)
   return (
     <>
       {reviewsList?.map(review => {
+        console.log(review.review_id)
             let options = {
               year: "numeric",
               month: "long",
@@ -33,7 +34,7 @@ console.log("comments", reviewsList)
             const formatDateAndTime = new Intl.DateTimeFormat('en-US', options).format(timestamp)
             return ( 
               <ReadOnlyComments 
-              key={review.id}
+              key={review.review_id}
               review={review} 
               formatDateAndTime={formatDateAndTime} />
             )
