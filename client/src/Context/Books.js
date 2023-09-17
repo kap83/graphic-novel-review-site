@@ -16,11 +16,22 @@ export function BookProvider({children}) {
         })
     },[])
 
+    const handleAddedBook = (newBook) => {
+        const updateBooksData = [...booksData, newBook]
+        setBooksData(updateBooksData)
+    }
+
     const handleEditedBook = (editedBook) => {
          //create a new array with every book who's id DOESN'T match the updatedBook.id
         const updatedBooksArr = booksData.filter(book => book.id !== editedBook.id)
         //push updatedBook into the updatedBooksArr 
         updatedBooksArr.push(editedBook)
+        //sort the books in alphabetical order by title
+        updatedBooksArr.sort((a, b) => {
+            if (a.title < b.title) return -1
+            if (a.title > b.title) return 1
+            return 0
+        })
         setBooksData(updatedBooksArr)
     }
 
@@ -85,7 +96,8 @@ export function BookProvider({children}) {
         handleDeletedBook,
         handleEditedBookReview,
         handleNewReview,
-        handleDeletedReview
+        handleDeletedReview,
+        handleAddedBook
     }
 
     return <BooksContext.Provider value={booksValues}>{children}</BooksContext.Provider>

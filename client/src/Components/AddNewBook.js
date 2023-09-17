@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import { BooksContext } from '../Context/Books'
 
 export default function AddNewBook() {
-const {setBooksData} = useContext(BooksContext)
+const {handleAddedBook} = useContext(BooksContext)
 
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
@@ -31,7 +31,7 @@ const {setBooksData} = useContext(BooksContext)
         if(res.ok) {
           res.json()
           .then(data => {
-            setBooksData(prevBooksData => [...prevBooksData, data])
+            handleAddedBook(data)
             setTitle("")
             setAuthor("")
             setArtist("")

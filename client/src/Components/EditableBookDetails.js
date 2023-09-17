@@ -5,7 +5,7 @@ export default function EditableBookDetails({handleEditToggleClick, handleEditFo
 //create css for input boxes. reminder to close and open to see changes 
 
   return (
-    <div>
+    <>
       <tr>
         <td>
           COVER URL: 
@@ -77,6 +77,6 @@ export default function EditableBookDetails({handleEditToggleClick, handleEditFo
       <button onClick={handleEditToggleClick}>CANCEL</button>
       </td>
      </tr>
-    </div>
+    </>
   )
 }
