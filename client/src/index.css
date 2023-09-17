@@ -21,16 +21,6 @@ h3 {
   margin: 0 auto; 
 }
 
-.ulStyle {
-  padding-left: 40%;
-  display: inline-flex;
-  list-style-type: none
-}
-.liStyle {
-  margin-left: 4%;
-  font-size: 16pt;
-  white-space: nowrap;
-}
 
  .image-container { 
   display: inline;

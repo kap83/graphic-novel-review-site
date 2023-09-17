@@ -5,7 +5,8 @@ export const BooksContext = React.createContext();
 export function BookProvider({children}) {
     const [booksData, setBooksData] = useState([])
 
-    console.log("in booksContext", booksData)
+    console.log("in bookContext", booksData)
+
 
     useEffect(() => {
         fetch('/books')

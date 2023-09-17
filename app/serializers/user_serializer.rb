@@ -15,7 +15,10 @@ class UserSerializer < ActiveModel::Serializer
      #if a review is present shovel book.cover_url/review.comment into their associated keys.
       if review.present?
         reviewed_books_data << {
+          book_id: book.id,
           cover_url: book.cover_url,
+          title: book.title,
+          review_id: review.id,
           comment: review.comment
         }
       end

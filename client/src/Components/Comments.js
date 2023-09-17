@@ -1,17 +1,21 @@
 import React, {useState, useEffect} from 'react'
-//import EditableComments from './EditableComments'
 import ReadOnlyComments from './ReadOnlyComments'
 
 export default function Comments({selectedBook}) {
 
 const [reviewsList, setReviewsList] = useState([])
 
+
+
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
-  if(selectedBook && selectedBook.reviews) {
-    setReviewsList(selectedBook.reviews)
+  if(selectedBook && selectedBook.user_review_details) {
+    setReviewsList(selectedBook.user_review_details)
   }
 }, [selectedBook])
+
+//click show comments, get all reviews for this book
+console.log("comments", reviewsList)
 
 
   return (

@@ -8,7 +8,7 @@ export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState({});
   const [notLoggedInError, setNotLoggedInError] = useState('')
 
-console.log("in context", currentUser)
+
 
   useEffect(()=> {
     fetch("/auth").then(res=> {
