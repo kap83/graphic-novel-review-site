@@ -1,6 +1,5 @@
 class ReviewsController < ApplicationController
 
-wrap_parameters format: []
 
     def index
         review = Review.all
@@ -29,13 +28,12 @@ wrap_parameters format: []
     private 
 
     def review_params
-        params.permit(:book_id, :created_at, :comment, :user_review_details)
+        params.permit(:id, :book_id, :created_at, :comment)
     end
 
     def current_user
        User.find(session[:user_id])
     end
-
 
     def find_review
         current_user.reviews.find(params[:id])

@@ -22,13 +22,15 @@ const handleSubmit = (e) => {
       comment: newComment
     }
 
-    fetch(`/books/${parseId}/reviews`, {
+    fetch(`/reviews`, {
       method: 'POST',
       headers: {'Content-type': 'application/json'},
       body: JSON.stringify(formValues)
     })
     .then(res=> res.json())
-    .then(newReview => handleNewReview(newReview))
+    .then(newReview => {
+
+      handleNewReview(newReview)})
 
     setNewComment("")
     handleClicked(false)

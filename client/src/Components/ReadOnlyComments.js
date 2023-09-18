@@ -1,18 +1,15 @@
 import React, {useState, useContext} from 'react'
 import { UserContext } from '../Context/User'
 import { BooksContext } from '../Context/Books'
-import { useParams } from 'react-router-dom'
-// eslint-disable-next-line
 import EditableComments from './EditableComments'
 
 export default function ReadOnlyComments({review, formatDateAndTime}) {
 
 
-const {currentUser} = useContext(UserContext)
-const {handleEditedBookReview, handleDeletedReview} = useContext(BooksContext)
 
-const {id} = useParams()
-const parseId = parseInt(id)
+const {currentUser} = useContext(UserContext)
+const {handleEditedReview, handleDeletedReview} = useContext(BooksContext)
+
 
 const [isEditing, setIsEditing] = useState(false)
 const [showSubmitBtn, setShowSubmitBtn] = useState(false) 
@@ -23,6 +20,7 @@ const [editableComment, setEditableComment] = useState({
   created_at: " "
 })
 
+
 const handleSubmitSBtn = () => {
     setShowSubmitBtn(true)
 }
@@ -31,7 +29,7 @@ const toggleEdit = (e, review) => {
   e.preventDefault()
   setIsEditing(true)
   const formValues = {
-    id: review.review_id,
+    id: review.id,
     comment: review.comment,
     user_id: review.user_id,
     created_at: review.created_at
@@ -47,13 +45,14 @@ const cancelEdit = () => {
 
 const handleEditFormChange =(e) => {
   e.preventDefault()
+  
   setEditableComment(editableComment => ({...editableComment, comment: e.target.value}))
 }
 
 const handleSubmit = (e) => {
   e.preventDefault()
 
-  fetch(`/books/${parseId}/reviews/${editableComment.id}`, {
+  fetch(`/reviews/${editableComment.id}`, {
     method: "PATCH",
     headers: {
       "Accept": "application/json",
@@ -63,8 +62,8 @@ const handleSubmit = (e) => {
   })
   .then(res=> res.json())
   .then(editedReview => {
-    console.log("in fetch", editedReview)
-    handleEditedBookReview(editedReview)
+    
+    handleEditedReview(editedReview)
   })
   setIsEditing(false)
   setEditableComment("")
@@ -72,10 +71,10 @@ const handleSubmit = (e) => {
 }
 
 function handleDelete() {
-    fetch(`/reviews/${review.review_id}`, {
-      method: "DELETE",
-    })
-    .then(handleDeletedReview(review))
+  fetch(`/reviews/${review.id}`, {
+    method: "DELETE",
+  })
+  .then(handleDeletedReview(review))
 }
 
   return (

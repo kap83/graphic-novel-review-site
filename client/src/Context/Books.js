@@ -39,65 +39,59 @@ export function BookProvider({children}) {
         const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
         setBooksData(updatedBooksArr)
     }
+    const handleEditedReview = (editedReview) => {
+      //map through booksData
+      const updatedBookData = booksData.map(book => {
+          //if the book.id matches editedReview.book_id
+         if (book.id === editedReview.book_id) {
+          //create a variable that will hold all the reviews with ids that don't match the editedReview.id
+          const updatedReviews = book.reviews.filter(review => review.id !== editedReview.id)
+          //push editedReview into updatedReviews
+          updatedReviews.push(editedReview)
 
-    const handleEditedBookReview = (editedReview) => {
-        // Map through booksData
-        const updatedBookData = booksData?.map((book) => {
-          // If the book.id matches editedReview.book_id
-          if (book.id === editedReview.book_id) {
-            // Create an updated user_review_details array with the edited review
-            const updatedReviews = book.user_review_details.map((review) => {
-              if (review.review_id === editedReview.id) {
-                // Update the review with the edited data
-                return {
-                  ...review,
-                  comment: editedReview.comment,
-                  created_at: editedReview.created_at,
-                };
-              }
-              return review;
-            });
-            // Make a copy of the book with the updated user_review_details
-            return {
+          //make a copy of books w/the updated reviews
+          return {
               ...book,
-              user_review_details: updatedReviews,
-            };
+              reviews: updatedReviews
           }
-          return book;
-        });
-        
-  
-        setBooksData(updatedBookData)
-      };
+         }
+         return book
 
-    const handleNewReview = (newReview) => {
-        const updatedBooksData = booksData.map(book => {
-                if(book.id === newReview.book_id) {
-                    const updatedReviews = Object.values(book.reviews).filter(review => review.id !== newReview.id)
-                    return {
-                        ...book,
-                    reviews: [...updatedReviews, newReview]
-                    }
-                }
-            return book
-        })
-        
-        setBooksData(updatedBooksData)
-    }
+      }) 
+      setBooksData(updatedBookData)
 
-    const handleDeletedReview = (deletedReview) => {
-        const updatedBooksData = booksData.map(book => {
-            if(book.id === deletedReview.book_id) {
-                const updatedReviews = book.reviews.filter(review => review.id !== deletedReview.id)
-                return {
-                    ...book,
-                    reviews: updatedReviews
-                }
-            }
-            return book
-        })
-        setBooksData(updatedBooksData)
-    }
+  }
+      
+
+
+  const handleNewReview = (newReview) => {
+      const updatedBooksData = booksData.map(book => {
+              if(book.id === newReview.book_id) {
+                  const updatedReviews = Object.values(book.reviews).filter(review => review.id !== newReview.id)
+                  return {
+                      ...book,
+                  reviews: [...updatedReviews, newReview]
+                  }
+              }
+          return book
+      })
+      
+      setBooksData(updatedBooksData)
+  }
+
+  const handleDeletedReview = (deletedReview) => {
+      const updatedBooksData = booksData.map(book => {
+          if(book.id === deletedReview.book_id) {
+              const updatedReviews = book.reviews.filter(review => review.id !== deletedReview.id)
+              return {
+                  ...book,
+                  reviews: updatedReviews
+              }
+          }
+          return book
+      })
+      setBooksData(updatedBooksData)
+  }
 
 
     const booksValues ={
@@ -105,7 +99,7 @@ export function BookProvider({children}) {
         setBooksData,
         handleEditedBook,
         handleDeletedBook,
-        handleEditedBookReview,
+        handleEditedReview,
         handleNewReview,
         handleDeletedReview,
         handleAddedBook

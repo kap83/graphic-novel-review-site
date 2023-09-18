@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
     include ActionController::Cookies
 
+    wrap_parameters format: []
+
     before_action :authorized
 
     def authorized

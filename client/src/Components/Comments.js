@@ -5,23 +5,19 @@ export default function Comments({selectedBook}) {
 
 const [reviewsList, setReviewsList] = useState([])
 
-
-
 useEffect(() => {
   //if selectedBooks.reviews exists, setReviewsList(selectedBook.reviews)
-  if(selectedBook && selectedBook.user_review_details) {
-    setReviewsList(selectedBook.user_review_details)
+  if(selectedBook && selectedBook.reviews) {
+    setReviewsList(selectedBook.reviews)
   }
 }, [selectedBook])
 
-//click show comments, get all reviews for this book
-console.log("comments", reviewsList)
 
 
   return (
     <>
       {reviewsList?.map(review => {
-        console.log(review.review_id)
+
             let options = {
               year: "numeric",
               month: "long",
@@ -34,7 +30,7 @@ console.log("comments", reviewsList)
             const formatDateAndTime = new Intl.DateTimeFormat('en-US', options).format(timestamp)
             return ( 
               <ReadOnlyComments 
-              key={review.review_id}
+              key={review.id}
               review={review} 
               formatDateAndTime={formatDateAndTime} />
             )

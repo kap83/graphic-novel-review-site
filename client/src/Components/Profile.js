@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, { useContext} from 'react'
 import { UserContext } from '../Context/User'
 import {Link} from 'react-router-dom'
 
@@ -7,19 +7,6 @@ import {Link} from 'react-router-dom'
 export default function Profile() {
   
     const {currentUser} = useContext(UserContext)
-    console.log(currentUser)
-
-    const [showComment, setShowComment] = useState(false)
-    const [reviewId, setReviewId] = useState(null)
-
-    console.log(reviewId)
-
-    const handleShowComment = (e) => {
-     const clickedId = e.target.id
-      setReviewId(clickedId === reviewId ? null : clickedId)
-      setShowComment(!showComment)
-    }
-
     
   return (
     <div>
@@ -41,9 +28,9 @@ export default function Profile() {
              </Link>
             </td>
             <td>
-              <button id={review.review_id} onClick={(e)=> handleShowComment(e)}>{ showComment ? "HIDE COMMENT" : "SHOW COMMENT"}</button>
+              {review.comment}
             </td>
-              {console.log(reviewId === review.review_id)}
+            
           </tr>
       ))}
          

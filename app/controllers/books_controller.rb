@@ -1,11 +1,8 @@
 class BooksController < ApplicationController
 
-   wrap_parameters format: []
-   
-
     def index
        book = Book.all.order(title: 'asc')
-       render json: book
+       render json: book.includes(:reviews)
     end
 
     def show 

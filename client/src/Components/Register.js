@@ -31,7 +31,6 @@ export default function Register() {
         })
         .then(res=> res.json())
         .then(data => {
-            console.log("response", data)
             if(data.username === username) {
                 setCurrentUser(data)
                 setLoggedIn(true)
