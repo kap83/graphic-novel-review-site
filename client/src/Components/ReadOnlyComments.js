@@ -9,8 +9,6 @@ export default function ReadOnlyComments({review, formatDateAndTime}) {
 
 const {currentUser} = useContext(UserContext)
 const {handleEditedReview, handleDeletedReview} = useContext(BooksContext)
-
-
 const [isEditing, setIsEditing] = useState(false)
 const [showSubmitBtn, setShowSubmitBtn] = useState(false) 
 const [editableComment, setEditableComment] = useState({

@@ -8,7 +8,7 @@ export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState({});
   const [notLoggedInError, setNotLoggedInError] = useState('')
 
-//console.log("currentUser", currentUser)
+console.log("currentUser", currentUser)
 
   useEffect(()=> {
     fetch("/auth").then(res=> {
@@ -38,6 +38,10 @@ export function UserProvider({ children }) {
       setLoggedIn(false)
     })
   }
+
+
+
+
 
   const userValues = {
     currentUser,

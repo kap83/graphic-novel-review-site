@@ -11,33 +11,26 @@ export default function Profile() {
   return (
     <div>
       <h1>Hi {currentUser.first_name}</h1> 
-      <h2>Reviewed Books: </h2>
+      <h2>Reviewed Books:</h2>
       <table>
         <tbody>
-          {currentUser?.reviewed_books.map(review => (
-          <tr key={review.review_id}>
+          {currentUser?.books.map(book => (
+          <tr key={book.id}>
             <td>
              <Link
-             to={`/books/${review.book_id}`}>
+             to={`/books/${book.id}`}>
              <img 
-                src={review.cover_url}  
-                alt={review.title}
+                src={book.cover_url}  
+                alt={book.title}
                 width={100}
                 height={100}
               />
              </Link>
             </td>
-            <td>
-              {review.comment}
-            </td>
-            
           </tr>
       ))}
-         
         </tbody>
       </table>
-
-
     </div>
   )
 }

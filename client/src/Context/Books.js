@@ -39,6 +39,11 @@ export function BookProvider({children}) {
         const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
         setBooksData(updatedBooksArr)
     }
+
+
+
+    
+
     const handleEditedReview = (editedReview) => {
       //map through booksData
       const updatedBookData = booksData.map(book => {
@@ -62,8 +67,6 @@ export function BookProvider({children}) {
 
   }
       
-
-
   const handleNewReview = (newReview) => {
       const updatedBooksData = booksData.map(book => {
               if(book.id === newReview.book_id) {
