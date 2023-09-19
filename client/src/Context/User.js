@@ -40,12 +40,19 @@ console.log("currentUser", currentUser)
 
 //updates currentUser's books array with any new books the user reviews
 
-const addNewlyReviewedBook = (book) => {
+const handleNewlyReviewedBook = (book) => {
   const updateBooksArr = [...currentUser.books, book]
   setCurrentUser({...currentUser, books: updateBooksArr})
 }
 
 //removes from the currentUser's book array, any book that was deleted
+
+const handleDeletedBookReview = (delbook) => {
+  console.log("in user", delbook)
+  const updatedBookArr = currentUser.books.filter(book => book.id !== delbook.book_id)
+  console.log("updated", updatedBookArr)
+  setCurrentUser({...currentUser, books: updatedBookArr})
+}
 
 
 
@@ -56,7 +63,8 @@ const addNewlyReviewedBook = (book) => {
     handleLogout,
     setLoggedIn,
     notLoggedInError,
-    addNewlyReviewedBook
+    handleNewlyReviewedBook,
+    handleDeletedBookReview
   }
 
 

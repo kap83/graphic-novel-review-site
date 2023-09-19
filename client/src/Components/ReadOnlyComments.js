@@ -7,7 +7,7 @@ export default function ReadOnlyComments({review, formatDateAndTime}) {
 
 
 
-const {currentUser} = useContext(UserContext)
+const {currentUser, handleDeletedBookReview} = useContext(UserContext)
 const {handleEditedReview, handleDeletedReview} = useContext(BooksContext)
 const [isEditing, setIsEditing] = useState(false)
 const [showSubmitBtn, setShowSubmitBtn] = useState(false) 
@@ -72,7 +72,7 @@ function handleDelete() {
   fetch(`/reviews/${review.id}`, {
     method: "DELETE",
   })
-  .then(handleDeletedReview(review))
+.then(handleDeletedReview(review), handleDeletedBookReview(review) )
 }
 
   return (
