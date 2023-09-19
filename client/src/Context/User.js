@@ -28,7 +28,6 @@ console.log("currentUser", currentUser)
     })
   }, [])
 
-  
   function handleLogout() {
     fetch("/logout", {
       method: "DELETE"
@@ -39,7 +38,14 @@ console.log("currentUser", currentUser)
     })
   }
 
+//updates currentUser's books array with any new books the user reviews
 
+const addNewlyReviewedBook = (book) => {
+  const updateBooksArr = [...currentUser.books, book]
+  setCurrentUser({...currentUser, books: updateBooksArr})
+}
+
+//removes from the currentUser's book array, any book that was deleted
 
 
 
@@ -49,7 +55,8 @@ console.log("currentUser", currentUser)
     loggedIn,
     handleLogout,
     setLoggedIn,
-    notLoggedInError
+    notLoggedInError,
+    addNewlyReviewedBook
   }
 
 

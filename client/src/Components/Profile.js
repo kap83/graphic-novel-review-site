@@ -2,11 +2,9 @@ import React, { useContext} from 'react'
 import { UserContext } from '../Context/User'
 import {Link} from 'react-router-dom'
 
-
-
 export default function Profile() {
   
-    const {currentUser} = useContext(UserContext)
+const {currentUser} = useContext(UserContext)
     
   return (
     <div>
