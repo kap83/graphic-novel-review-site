@@ -43,13 +43,10 @@ const {handleAddedBook} = useContext(BooksContext)
         else {
           res.json()
           .then(data => {
-            const message = Object.entries(data.errors).map(error => {
-              const field = error[0]
-              const errorMsg = error[1]
-              // eslint-disable-next-line
-              return ` ${field}: ` + ` ${errorMsg}` 
+            const errorMsg = data.errors.map(error => {
+              return ` ${error}`
             })
-            alert(message)
+            alert(errorMsg)
           })
         }
       }) 

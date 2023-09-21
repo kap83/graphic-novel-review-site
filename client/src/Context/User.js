@@ -54,8 +54,6 @@ const handleDeletedBookReview = (delbook) => {
   setCurrentUser({...currentUser, books: updatedBookArr})
 }
 
-
-
   const userValues = {
     currentUser,
     setCurrentUser,

@@ -65,10 +65,25 @@ const handleBookEditSubmit = (e) => {
     },
     body: JSON.stringify(formValues)
   })
-  .then(res=> res.json())
-  .then(editedBook => handleEditedBook(editedBook))
-  
-  setIsEditing(false)
+  .then(res => {
+    if(res.ok) {
+      res.json()
+      .then(data=> {
+        handleEditedBook(data)
+        setIsEditing(false)
+      })
+    }
+    else {
+      res.json()
+      .then(data=> {
+        const errorMsg = data.errors.map(error => {
+          return ` ${error}`
+        })
+        alert(errorMsg)
+      })
+    }
+  })
+
 }
 
 const handleClicked =() => {
