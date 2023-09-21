@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
 
-rescue_from ActiveRecord::RecordInvalid, with: :render_missing_attribute_response
 
     def index
        book = Book.all.order(title: 'asc')
@@ -36,8 +35,5 @@ private
       Book.find(params[:id])
    end
 
-   def render_missing_attribute_response(invalid)
-      render json: { errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
-   end
 
 end

@@ -7,14 +7,14 @@ class ReviewsController < ApplicationController
     end 
 
     def create
-        review = current_user.reviews.create(review_params)
+        review = current_user.reviews.create!(review_params)
         render json: review
 
     end
 
     def update
         review = find_review
-        review.update(review_params)
+        review.update!(review_params)
         render json: review
     end
 

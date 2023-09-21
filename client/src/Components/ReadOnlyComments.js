@@ -5,8 +5,6 @@ import EditableComments from './EditableComments'
 
 export default function ReadOnlyComments({review, formatDateAndTime}) {
 
-
-
 const {currentUser, handleDeletedBookReview} = useContext(UserContext)
 const {handleEditedReview, handleDeletedReview} = useContext(BooksContext)
 const [isEditing, setIsEditing] = useState(false)
@@ -58,14 +56,27 @@ const handleSubmit = (e) => {
     },
     body: JSON.stringify(editableComment)
   })
-  .then(res=> res.json())
-  .then(editedReview => {
-    
-    handleEditedReview(editedReview)
+  .then(res => {
+    if(res.ok) {
+      res.json()
+      .then(data => {
+        handleEditedReview(data)
+        setIsEditing(false)
+        setEditableComment("")
+        setShowSubmitBtn(false)
+      })
+    }
+    else {
+      res.json()
+      .then(data=> {
+        const errorMsg = data.errors.map(error => {
+          return ` ${error}`
+        })
+        alert(errorMsg)
+      })
+    }
   })
-  setIsEditing(false)
-  setEditableComment("")
-  setShowSubmitBtn(false)
+
 }
 
 function handleDelete() {

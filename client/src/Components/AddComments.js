@@ -27,14 +27,26 @@ const handleSubmit = (e) => {
       headers: {'Content-type': 'application/json'},
       body: JSON.stringify(formValues)
     })
-    .then(res=> res.json())
-    .then(newReview => {
+    .then(res => {
+      if(res.ok) {
+        res.json()
+        .then(data => {
+          handleNewReview(data)
+          setNewComment("")
+          handleClicked(false)
+        })
+      }
+      else {
+        res.json()
+        .then(data=> {
+          const errorMsg = data.errors.map(error => {
+            return ` ${error}`
+          })
+          alert(errorMsg)
+        })
+      }
+    })
 
-      handleNewReview(newReview)})
-
-    setNewComment("")
-    handleClicked(false)
-   
 }
 
 
