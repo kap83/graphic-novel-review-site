@@ -7,7 +7,6 @@ export default function Login({handleClick}) {
       const {setLoggedIn, notLoggedInError, setCurrentUser} = useContext(UserContext)
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
-      const [error, setError] = useState(null)
 
    
       function handleSubmit(e) {
@@ -24,24 +23,28 @@ export default function Login({handleClick}) {
           },
           body: JSON.stringify(loginValues)
         })
-        .then(res=> res.json())
-        .then(
-          (data) => {
-            if(data.username === username) {
+        .then(res => {
+          if(res.ok) {
+            res.json()
+            .then(data => {
               setCurrentUser(data)
               setLoggedIn(true)
               setUsername('')
               setPassword('')
-            } else {
-              setError(data.error.login)
-            }
-        }) 
+            })
+          }
+          else {
+            res.json()
+            .then(data =>{
+                const errorMsg = data.error
+                alert(errorMsg)
+            })
+          }
+        })
+
+    
       }
 
-      const displayError = error ? <i>{error}</i> : null
-
-
-     
 
   return (
     <div className='loginStyle'>
@@ -69,7 +72,6 @@ export default function Login({handleClick}) {
           />
       </label>
       <br />
-      <h3 style={{marginLeft: "4%"}}>{displayError}</h3>
       <button style={{marginLeft: "27%"}} type='submit'>LOGIN</button>
       <button style={{marginLeft: "1%"}} onClick={handleClick}>REGISTER</button>
     </form>

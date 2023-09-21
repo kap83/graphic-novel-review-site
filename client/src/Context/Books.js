@@ -4,11 +4,9 @@ import { UserContext } from '../Context/User'
 export const BooksContext = React.createContext();
 
 export function BookProvider({children}) {
-    const {handleNewlyReviewedBook, handleDeletedBookReview} = useContext(UserContext)
+    const {handleNewlyReviewedBook} = useContext(UserContext)
 
     const [booksData, setBooksData] = useState([])
-
-    console.log("in bookContext", booksData)
 
 
     useEffect(() => {
