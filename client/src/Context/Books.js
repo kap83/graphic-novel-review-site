@@ -7,6 +7,7 @@ export function BookProvider({children}) {
     const {handleNewlyReviewedBook} = useContext(UserContext)
 
     const [booksData, setBooksData] = useState([])
+    console.log("book", booksData)
 
 
     useEffect(() => {
@@ -54,6 +55,7 @@ export function BookProvider({children}) {
           const updatedReviews = book.reviews.filter(review => review.id !== editedReview.id)
           //push editedReview into updatedReviews
           updatedReviews.push(editedReview)
+         
 
           //make a copy of books w/the updated reviews
           return {

@@ -35,5 +35,4 @@ private
       Book.find(params[:id])
    end
 
-
 end

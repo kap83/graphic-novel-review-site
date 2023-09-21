@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end
 
     def show 
-        user = User.find_by(session[:user_id])
+        user = @current_user
         if user
             render json: user
         else
@@ -29,8 +29,5 @@ class UsersController < ApplicationController
         params.permit(:username, :password, :password_confirmation, :first_name, :last_name)
     end
 
-    # def current_user
-    #     User.find_by(session[:user_id])
-    # end
 
 end

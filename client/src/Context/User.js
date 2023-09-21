@@ -8,6 +8,8 @@ export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState({});
   const [notLoggedInError, setNotLoggedInError] = useState('')
 
+  console.log("currentUser1", currentUser)
+
   useEffect(()=> {
     fetch("/me").then(res=> {
       if (res.ok) {
@@ -42,6 +44,12 @@ const handleNewlyReviewedBook = (book) => {
   setCurrentUser({...currentUser, books: updateBooksArr})
 }
 
+const handleEditedBookReviewArr = (updatedReview) => {
+  const updatedReviewArr = currentUser.reviews.filter(review => review.id !== updatedReview.id)
+  updatedReviewArr.push(updatedReview)
+  setCurrentUser({...currentUser, reviews: updatedReviewArr})
+}
+
 //removes from the currentUser's book array, any book that was deleted
 
 const handleDeletedBookReview = (delbook) => {
@@ -59,7 +67,8 @@ const handleDeletedBookReview = (delbook) => {
     setLoggedIn,
     notLoggedInError,
     handleNewlyReviewedBook,
-    handleDeletedBookReview
+    handleDeletedBookReview,
+    handleEditedBookReviewArr
   }
 
 

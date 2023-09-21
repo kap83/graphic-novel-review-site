@@ -6,10 +6,11 @@ class ApplicationController < ActionController::API
     before_action :authorized
 
     rescue_from ActiveRecord::RecordInvalid, with: :render_missing_attribute_response
-  
+
 
     def authorized
-      unless session.include? :user_id
+      @current_user = User.find_by(id: session[:user_id])
+      unless @current_user
       return render json: {error: "Please Sign In"}, status: :unauthorized 
       end
     end
