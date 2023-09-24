@@ -18,11 +18,14 @@ export function BookProvider({children}) {
         })
     },[])
 
+    //works
     const handleAddedBook = (newBook) => {
         const updateBooksData = [...booksData, newBook]
         setBooksData(updateBooksData)
     }
 
+    
+    //works
     const handleEditedBook = (editedBook) => {
          //create a new array with every book who's id DOESN'T match the updatedBook.id
         const updatedBooksArr = booksData.filter(book => book.id !== editedBook.id)
@@ -37,6 +40,7 @@ export function BookProvider({children}) {
         setBooksData(updatedBooksArr)
     }
 
+    //works
     const handleDeletedBook = (deletedBook) => {
         handleCurrentUserDeletedBook(deletedBook)
         const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
@@ -46,7 +50,7 @@ export function BookProvider({children}) {
 
 
     
-
+    //works
     const handleEditedReview = (editedReview) => {
       //map through booksData
       const updatedBookData = booksData.map(book => {
@@ -69,7 +73,7 @@ export function BookProvider({children}) {
       setBooksData(updatedBookData)
 
   }
-      
+    //works
   const handleNewReview = (newReview) => {
       const updatedBooksData = booksData.map(book => {
               if(book.id === newReview.book_id) {
@@ -86,6 +90,7 @@ export function BookProvider({children}) {
       setBooksData(updatedBooksData)
   }
 
+  //works
   const handleDeletedReview = (deletedReview) => {
       const updatedBooksData = booksData.map(book => {
           if(book.id === deletedReview.book_id) {

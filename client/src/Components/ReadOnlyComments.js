@@ -16,8 +16,6 @@ const [editableComment, setEditableComment] = useState({
   created_at: " "
 })
 
-console.log("reviews", review)
-
 
 const handleSubmitSBtn = () => {
     setShowSubmitBtn(true)
@@ -92,14 +90,14 @@ function handleDelete() {
   return (
     <>
     <form onSubmit={handleSubmit}>
-      <table>
+      <table style={{width: '450px'}}>
         <tbody>
         <tr>
       <td>
-        <span style={{fontWeight: 'bold', paddingRight: '3%'}}>
-          {review.username}
+        <span style={{fontWeight: 'bold', paddingRight: '1%'}}>
+          {review.username} 
         </span>
-        {formatDateAndTime}
+          wrote on {formatDateAndTime}
         </td>
     </tr>
   <tr>

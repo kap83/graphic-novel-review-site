@@ -39,6 +39,7 @@ export function UserProvider({ children }) {
 
 //updates currentUser's books array with any new books the user reviews
 
+//works
 const handleNewlyReviewedBook = (newReview, book) => {
  // Create new arrays with the updated data
   const updatedBooksArr = [...currentUser.books, book]
@@ -52,6 +53,7 @@ const handleNewlyReviewedBook = (newReview, book) => {
   });
 };
 
+//works
 const handleEditedBookReviewArr = (updatedReview) => {
   const updatedReviewArr = currentUser.reviews.filter(review => review.id !== updatedReview.id)
   updatedReviewArr.push(updatedReview)
@@ -60,16 +62,25 @@ const handleEditedBookReviewArr = (updatedReview) => {
 
 //removes book from the currentUser's book array, when associated review that is deleted
 
+//works
 const handleDeletedBookReview = (delBook) => {
   const updatedBookArr = currentUser.books.filter(book => book.id !== delBook.book_id)
   setCurrentUser({...currentUser, books: updatedBookArr})
 }
 
+//works
 const handleCurrentUserDeletedBook = (delBook) => {
-  console.log("in del", delBook)
+  console.log("in del", delBook, delBook.id)
   const updatedBooksArr = currentUser.books.filter(book => book.id !== delBook.id)
-  setCurrentUser({...currentUser, books: updatedBooksArr})
+  const updatedReviewsArr = currentUser.reviews.filter(review => review.book_id !== delBook.id)
+  setCurrentUser({...currentUser, 
+    books: updatedBooksArr,
+    reviews: updatedReviewsArr
+  })
+  
 }
+
+console.log("currentUser2", currentUser)
 
   const userValues = {
     currentUser,

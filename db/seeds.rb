@@ -2,13 +2,11 @@ puts "🌱 Seeding spices..."
 
 User.create(first_name: "Alex", last_name: "Manes", username: "spectralsongwrite", password: "dsIda83?lk" )
 User.create(first_name: "Maria", last_name: "DeLuca", username: "amethystoracle", password: "handinmypocket")
-User.create(first_name: "Test", last_name: "User", username: "test", password: "testing")
+
 
 Book.create(title: "100 Bullets", author: "Brian Azzarello", artist: "Eduardo Risso", volume: 1, cover_url:"https://m.media-amazon.com/images/P/1563896451.01._SCLZZZZZZZ_SX500_.jpg")
 Book.create(title: "Saga", author: "Brian K. Vaughan", artist: "Fiona Staples", volume: 1, cover_url:"https://m.media-amazon.com/images/I/719UvBwUycL.jpg")
 Book.create(title: "All Star Superman", author: "Grant Morrison", artist: "Frank Quietly", volume: 1, cover_url:"https://m.media-amazon.com/images/I/71RgvfEIzlL.jpg")
-Book.create(title: "Batman: The Long Halloween", author: "Jeph Loeb", artist: "Tim Sale",  volume: 1, cover_url:"https://m.media-amazon.com/images/I/91D+7bVSo0L.jpg")
-Book.create(title: "X-MEN: Days of Future Past", author: "Chris Claremont", artist: "John Byrne", volume: 1, cover_url:"https://m.media-amazon.com/images/I/913UGh9L+XL.jpg")
 Book.create(title: "Secret Wars", author: "Jonathan Hickman", artist: "Esad Ribic", volume: 1, cover_url:"https://m.media-amazon.com/images/I/91bkXurWqkL.jpg")
 Book.create(title: "The Goon", author: "Eric Powell", artist: "Eric Powell", volume: 1, cover_url:"https://cdn.kobo.com/book-images/bae62fde-57be-4d53-a9e2-4494ed8f9da9/1200/1200/False/the-goon-vol-1-bunch-of-old-crap-an-omnibus.jpg")
 Book.create(title: "Tomie", author: "Junji Ito", artist: "Junji Ito", volume: 1, cover_url:"https://m.media-amazon.com/images/P/B01M7XY0KL.01._SCLZZZZZZZ_SX500_.jpg")

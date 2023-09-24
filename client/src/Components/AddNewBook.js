@@ -140,10 +140,9 @@ const {handleAddedBook} = useContext(BooksContext)
             </td>
           </tr>
           <tr>
-            <br />
             <td>
               <button 
-                style={{marginLeft: '25%'}} 
+                style={{marginLeft: '150%'}} 
                 type='submit'>
                 SUBMIT
               </button>
