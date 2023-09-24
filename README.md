@@ -1,30 +1,12 @@
-# README
+# Graphic Novel Review
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A place to leave reviews for the graphic novels.  
 
-Things you may want to cover:
+## Functionality  
 
-* Ruby version
+Easily add, delete or edit reviews and graphic novels. Register with confidence! Password security is ensured with BCrypt.
 
-* System dependencies
+#Credit 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# graphic-novel-review-site
-
-
-
-
-https://askubuntu.com/questions/539187/how-to-make-postgres-start-automatically-on-boot
+images acquired from https://unsplash.com/
+art by Yusuke Murata & Todd McFarlane
