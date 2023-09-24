@@ -95,8 +95,12 @@ function handleDelete() {
       <table>
         <tbody>
         <tr>
-      <td>{review.username}</td>
-      <td>{formatDateAndTime}</td>
+      <td>
+        <span style={{fontWeight: 'bold', paddingRight: '3%'}}>
+          {review.username}
+        </span>
+        {formatDateAndTime}
+        </td>
     </tr>
   <tr>
   {isEditing === true ? 
@@ -110,24 +114,26 @@ function handleDelete() {
     </>  
     }
   </tr>
-      <tr> 
+      <tr > 
             {
               currentUser.id === review.user_id ?   
                 <>
                   {
                     showSubmitBtn === true ? 
-                    <td>
+                    <td >
                       <button type='submit'>SUBMIT</button>
                     </td> : 
-                    <td>
+                    <td style={{paddingBottom: '20px'}}>
                       <button type='button' onClick={(e) => {
                       handleSubmitSBtn(e)
                       toggleEdit(e, review)
-                    }}>EDIT COMMENT</button></td>
-                  }
-                   <td>
+                    }}>EDIT COMMENT</button>
+                    <span style={{paddingLeft: '2px'}}>
                     <button type='button' onClick={handleDelete}>DELETE COMMENT</button>
-                  </td>
+                    </span>
+                    
+                    </td>
+                  }
                 </>
                     : null
             }

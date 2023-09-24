@@ -95,8 +95,8 @@ const handleClicked =() => {
     <div 
       style={{padding: "20%"}}
     >
-    <div className='one'
-        style={{float: "left"}}
+    <div 
+        style={{float: "left",  paddingRight: '5%'}}
        >
        <img 
             className='img1'
@@ -104,11 +104,11 @@ const handleClicked =() => {
               alt={selectedBook.title} 
             />
       </div>
-        <div className='two'>
+        <div>
           <form   
             onSubmit={handleBookEditSubmit}
             >
-          <table style={{float: "left", border: "solid green 2px"}}>  
+          <table style={{float: "left"}}>  
             <tbody>
               {isEditing ? (
                 <EditableBookDetails 

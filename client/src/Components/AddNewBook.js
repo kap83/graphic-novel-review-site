@@ -55,8 +55,24 @@ const {handleAddedBook} = useContext(BooksContext)
 
   return (
     <div>
+      <h1>Add Book</h1>
+      <p 
+        style={{margin: '0'}}>
+          <span 
+            style={{fontWeight: 'bold', textDecoration: 'underline'}}>
+              NOTE
+              </span>
+              <span style={{fontWeight: 'bold', marginRight: '1px'}}>:
+              </span> 
+               IF THE BOOK ONLY HAS ONE VOLUME
+      </p>
+      <p 
+        style={{margin: '0'}}>
+          PUT A 1 UNDER VOLUME
+      </p>
       <form onSubmit={handleSubmit}>
-      <table>
+      <table 
+        style={{fontSize: 'larger', margin: '5%  35% '}}>
         <tbody>
           <tr>
             <td>
@@ -123,9 +139,18 @@ const {handleAddedBook} = useContext(BooksContext)
             />
             </td>
           </tr>
+          <tr>
+            <br />
+            <td>
+              <button 
+                style={{marginLeft: '25%'}} 
+                type='submit'>
+                SUBMIT
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
-      <button type='submit'>ADD</button>
       </form>
     </div>
   )

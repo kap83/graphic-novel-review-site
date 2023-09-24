@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../Context/User'
 import { NavLink } from 'react-router-dom'
+import '../index.css'
 
 export default function NavBar() {
 
@@ -10,6 +11,7 @@ const {handleLogout} = useContext(UserContext)
 const linkStyle = {
     color: "white"
 }
+
 
 
 return (
@@ -32,7 +34,7 @@ return (
       >
         ADD BOOKS
       </NavLink>
-    <button onClick={handleLogout}>LOGOUT</button>
+    <button className='logoutBtn' onClick={handleLogout}>LOGOUT</button>
     </div>
     </>
   )
