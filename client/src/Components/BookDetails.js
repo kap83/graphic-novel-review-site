@@ -34,7 +34,7 @@ export default function BookDetails() {
     volume: ""
    })
 
-   const [clicked, setClicked] = useState(false)
+
 
 
 useEffect(() => {
@@ -86,9 +86,7 @@ const handleBookEditSubmit = (e) => {
 
 }
 
-const handleClicked =() => {
-  setClicked(!clicked)
-}
+
 
   return (
   <>
@@ -131,8 +129,6 @@ const handleClicked =() => {
     </div>
     <div>
     <DisplayCommentsBtn selectedBook={selectedBook}/>
-        <button onClick={handleClicked}>{clicked === true ? "FORGET IT" : "ADD COMMENT"}</button> 
-        {clicked === true ? <AddComments handleClicked={handleClicked}/> : null }
     </div>
   </>
   )

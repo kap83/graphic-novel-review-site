@@ -1,20 +1,31 @@
 import React, {useState} from 'react'
-
 import Comments from './Comments'
+import AddComments from './AddComments'
 
 export default function DisplayCommentsBtn({selectedBook}) {
 
-    const [clicked, setClicked] = useState(false)
+    const [showCommentBtn, setShowCommentBtn] = useState(false)
+    const [addCommentBtn, setAddCommentBtn] = useState(false)
     
-    function handleClick() {
-        setClicked(!clicked)
+    function handleShowCommentClick() {
+      setShowCommentBtn(!showCommentBtn)
+      setAddCommentBtn(false)
     }
+
+    function handleAddCommentBtn() {
+      setAddCommentBtn(!addCommentBtn)
+      setShowCommentBtn(false)
+    }
+
 
  
   return (
     <>
-      <button type='button' onClick={handleClick}>{clicked ? "HIDE COMMENTS" : "SHOW COMMENTS" }</button>
-      {clicked ? <Comments selectedBook={selectedBook} /> : null }
+    <button onClick={handleAddCommentBtn}>{addCommentBtn === true ? "FORGET IT" : "ADD COMMENT"}</button> 
+    <button type='button' onClick={handleShowCommentClick}>{showCommentBtn ? "HIDE COMMENTS" : "SHOW COMMENTS" }</button>
+      {addCommentBtn === true ? <AddComments handleAddCommentBtn={handleAddCommentBtn}/> : null }
+      {showCommentBtn ? <Comments selectedBook={selectedBook} /> : null }
+      
     </>
   )
 }
