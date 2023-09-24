@@ -16,6 +16,8 @@ const [editableComment, setEditableComment] = useState({
   created_at: " "
 })
 
+console.log("reviews", review)
+
 
 const handleSubmitSBtn = () => {
     setShowSubmitBtn(true)

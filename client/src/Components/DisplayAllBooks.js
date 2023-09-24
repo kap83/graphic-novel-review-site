@@ -9,7 +9,7 @@ export default function DisplayAllBooks({book, id}) {
       <Link 
       to={`/books/${id}`}>
          <img 
-            className='image-container'
+            className='img1'
             src={book.cover_url}  
             alt={book.title} 
         />

@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import { UserContext } from '../Context/User'
 
+
 export default function Register() {
 
     const {setLoggedIn, setCurrentUser} = useContext(UserContext)

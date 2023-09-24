@@ -13,7 +13,7 @@ export default function ToggleLogin() {
 
   return (
     <div className='sign-in-register-page'>
-       {click === false ?  <Login handleClick={handleClick} /> : <Register /> }
+       {click === false ? <Login handleClick={handleClick} /> : <Register /> }
     </div>
   )
 }

@@ -5,5 +5,4 @@ class UserSerializer < ActiveModel::Serializer
 has_many :books
 has_many :reviews
   
-
 end

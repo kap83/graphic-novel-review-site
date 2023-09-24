@@ -21,8 +21,7 @@ h3 {
   margin: 0 auto; 
 }
 
-
- .image-container { 
+ .img1 { 
   display: inline;
   max-width: 368px; 
   height: 600px;
@@ -30,6 +29,17 @@ h3 {
   float: left;
   margin-bottom: 2rem;
 } 
+
+table {
+  width: 90%
+}
+
+.profileTable, td {
+  
+  margin-top: 5%;
+  border: 2px solid grey;
+  border-collapse: collapse;
+}
 
 .navBar {
   height: 100%;  
@@ -69,4 +79,4 @@ h3 {
   border: 2px solid black;
   border-radius: 12px;
   font-size: small;
-}
+} 

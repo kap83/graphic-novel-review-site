@@ -1,6 +1,7 @@
 import React, { useContext, Fragment} from 'react'
 import { UserContext } from '../Context/User'
 import {Link} from 'react-router-dom'
+import '../index.css'
 
 export default function Profile() {
   
@@ -9,21 +10,22 @@ const {currentUser} = useContext(UserContext)
     console.log(currentUser)
   return (
     <div>
-      <h1>Hi {currentUser.first_name}</h1> 
-      <h2>Reviewed Books:</h2>
+      <h1 style={{marginLeft: '50%'}}>Hi {currentUser.first_name}</h1> 
+      <h2 style={{marginTop: '5%'}}>Reviewed Books:</h2>
       <p>Click the cover to go to the book's page </p>
-      <table>
+      <table className='profileTable'>
         <tbody>
           {currentUser?.books.map(book => (
           <tr key={book.id}>
-            <td>
+            <td style={{width: '1%', whiteSpace: "nowrap"}} >
              <Link
              to={`/books/${book.id}`}>
              <img 
                 src={book.cover_url}  
                 alt={book.title}
-                width={100}
-                height={100}
+                width={200}
+                height={200}
+               
               />
              </Link>
             </td>

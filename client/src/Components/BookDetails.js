@@ -99,6 +99,7 @@ const handleClicked =() => {
         style={{float: "left"}}
        >
        <img 
+            className='img1'
               src={selectedBook.cover_url}  
               alt={selectedBook.title} 
             />
