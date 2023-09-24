@@ -21,11 +21,18 @@ export default function DisplayCommentsBtn({selectedBook}) {
  
   return (
     <>
-    <button onClick={handleAddCommentBtn}>{addCommentBtn === true ? "FORGET IT" : "ADD COMMENT"}</button> 
-    <button type='button' onClick={handleShowCommentClick}>{showCommentBtn ? "HIDE COMMENTS" : "SHOW COMMENTS" }</button>
-      {addCommentBtn === true ? <AddComments handleAddCommentBtn={handleAddCommentBtn}/> : null }
-      {showCommentBtn ? <Comments selectedBook={selectedBook} /> : null }
-      
+      <button 
+        type='button' 
+        onClick={handleAddCommentBtn}>
+        {addCommentBtn === true ? "FORGET IT" : "ADD COMMENT"}
+      </button> 
+      <button 
+        type='button' 
+        onClick={handleShowCommentClick}>
+        {showCommentBtn ? "HIDE COMMENTS" : "SHOW COMMENTS" }
+      </button>
+        {addCommentBtn === true ? <AddComments handleAddCommentBtn={handleAddCommentBtn}/> : null }
+        {showCommentBtn ? <Comments selectedBook={selectedBook} /> : null }
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function EditableComments({editableComment, cancelEdit, handleEditFormChange}) {
+export default function EditableComments({editableComment, handleEditFormChange}) {
 
   return (
     <>
@@ -12,9 +12,6 @@ export default function EditableComments({editableComment, cancelEdit, handleEdi
             onChange={handleEditFormChange}
           />
       </td>
-      <td>
-        <button type='button' onClick={cancelEdit}>CANCEL</button>
-        </td>
     </>
   )
 }

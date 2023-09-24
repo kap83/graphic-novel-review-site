@@ -107,7 +107,6 @@ function handleDelete() {
     <EditableComments 
       editableComment={editableComment}
       handleEditFormChange={handleEditFormChange}
-      cancelEdit={cancelEdit}
       /> :
     <>
       <td>{review.comment}</td>
@@ -122,16 +121,20 @@ function handleDelete() {
                     showSubmitBtn === true ? 
                     <td >
                       <button type='submit'>SUBMIT</button>
-                    </td> : 
+                      <button type='button' onClick={cancelEdit}>CANCEL</button>
+                    </td> 
+                    : 
                     <td style={{paddingBottom: '20px'}}>
                       <button type='button' onClick={(e) => {
                       handleSubmitSBtn(e)
                       toggleEdit(e, review)
                     }}>EDIT COMMENT</button>
                     <span style={{paddingLeft: '2px'}}>
-                    <button type='button' onClick={handleDelete}>DELETE COMMENT</button>
+                      <button type='button' 
+                        onClick={handleDelete}>
+                          DELETE COMMENT
+                      </button>
                     </span>
-                    
                     </td>
                   }
                 </>
@@ -140,9 +143,7 @@ function handleDelete() {
       </tr>
         </tbody>
       </table>
-    </form>
-  
-           
+    </form>  
     </>
   )
 }

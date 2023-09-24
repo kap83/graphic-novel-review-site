@@ -39,10 +39,18 @@ export function UserProvider({ children }) {
 
 //updates currentUser's books array with any new books the user reviews
 
-const handleNewlyReviewedBook = (book) => {
-  const updateBooksArr = [...currentUser.books, book]
-  setCurrentUser({...currentUser, books: updateBooksArr})
-}
+const handleNewlyReviewedBook = (newReview, book) => {
+ // Create new arrays with the updated data
+  const updatedBooksArr = [...currentUser.books, book]
+  const updatedReviewsArr = [...currentUser.reviews, newReview]
+
+  // Update the state with both updated arrays
+  setCurrentUser({
+    ...currentUser,
+    books: updatedBooksArr,
+    reviews: updatedReviewsArr,
+  });
+};
 
 const handleEditedBookReviewArr = (updatedReview) => {
   const updatedReviewArr = currentUser.reviews.filter(review => review.id !== updatedReview.id)
@@ -50,13 +58,17 @@ const handleEditedBookReviewArr = (updatedReview) => {
   setCurrentUser({...currentUser, reviews: updatedReviewArr})
 }
 
-//removes from the currentUser's book array, any book that was deleted
+//removes book from the currentUser's book array, when associated review that is deleted
 
-const handleDeletedBookReview = (delbook) => {
-  console.log("in user", delbook)
-  const updatedBookArr = currentUser.books.filter(book => book.id !== delbook.book_id)
-  console.log("updated", updatedBookArr)
+const handleDeletedBookReview = (delBook) => {
+  const updatedBookArr = currentUser.books.filter(book => book.id !== delBook.book_id)
   setCurrentUser({...currentUser, books: updatedBookArr})
+}
+
+const handleCurrentUserDeletedBook = (delBook) => {
+  console.log("in del", delBook)
+  const updatedBooksArr = currentUser.books.filter(book => book.id !== delBook.id)
+  setCurrentUser({...currentUser, books: updatedBooksArr})
 }
 
   const userValues = {
@@ -68,7 +80,8 @@ const handleDeletedBookReview = (delbook) => {
     notLoggedInError,
     handleNewlyReviewedBook,
     handleDeletedBookReview,
-    handleEditedBookReviewArr
+    handleEditedBookReviewArr, 
+    handleCurrentUserDeletedBook
   }
 
 

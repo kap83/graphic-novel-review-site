@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { UserContext } from '../Context/User'
 import { BooksContext } from '../Context/Books'
 
-export default function AddComments({handleClicked}) {
+export default function AddComments({handleAddCommentBtn}) {
 
 const {currentUser} = useContext(UserContext)
 
@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
         .then(data => {
           handleNewReview(data)
           setNewComment("")
-          handleClicked(false)
+          handleAddCommentBtn(false)
         })
       }
       else {

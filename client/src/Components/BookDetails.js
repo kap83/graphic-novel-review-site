@@ -35,8 +35,6 @@ export default function BookDetails() {
    })
 
 
-
-
 useEffect(() => {
   const findBook = booksData?.find(book => book.id === parseId)
   setSelectedBook(findBook)
@@ -85,8 +83,6 @@ const handleBookEditSubmit = (e) => {
   })
 
 }
-
-
 
   return (
   <>

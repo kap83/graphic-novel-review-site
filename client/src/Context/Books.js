@@ -4,7 +4,7 @@ import { UserContext } from '../Context/User'
 export const BooksContext = React.createContext();
 
 export function BookProvider({children}) {
-    const {handleNewlyReviewedBook} = useContext(UserContext)
+    const {handleNewlyReviewedBook, handleCurrentUserDeletedBook} = useContext(UserContext)
 
     const [booksData, setBooksData] = useState([])
     console.log("book", booksData)
@@ -38,6 +38,7 @@ export function BookProvider({children}) {
     }
 
     const handleDeletedBook = (deletedBook) => {
+        handleCurrentUserDeletedBook(deletedBook)
         const updatedBooksArr = booksData.filter(book => book.id !== deletedBook.id)
         setBooksData(updatedBooksArr)
     }
@@ -72,7 +73,7 @@ export function BookProvider({children}) {
   const handleNewReview = (newReview) => {
       const updatedBooksData = booksData.map(book => {
               if(book.id === newReview.book_id) {
-                handleNewlyReviewedBook(book)
+                handleNewlyReviewedBook(newReview, book)
                   const updatedReviews = Object.values(book.reviews).filter(review => review.id !== newReview.id)
                   return {
                       ...book,
@@ -80,6 +81,7 @@ export function BookProvider({children}) {
                   } 
               } 
           return book
+          
       })
       setBooksData(updatedBooksData)
   }
