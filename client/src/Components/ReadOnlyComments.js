@@ -126,11 +126,11 @@ function handleDelete() {
                       <button type='button' onClick={(e) => {
                       handleSubmitSBtn(e)
                       toggleEdit(e, review)
-                    }}>EDIT COMMENT</button>
+                    }}>EDIT REVIEW</button>
                     <span style={{paddingLeft: '2px'}}>
                       <button type='button' 
                         onClick={handleDelete}>
-                          DELETE COMMENT
+                          DELETE REVIEW
                       </button>
                     </span>
                     </td>

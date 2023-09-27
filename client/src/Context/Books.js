@@ -4,12 +4,12 @@ import { UserContext } from '../Context/User'
 export const BooksContext = React.createContext();
 
 export function BookProvider({children}) {
-    const {handleNewlyReviewedBook, handleCurrentUserDeletedBook} = useContext(UserContext)
-
+    // eslint-disable-next-line
     const [booksData, setBooksData] = useState([])
-    console.log("book", booksData)
+    const {handleNewlyReviewedBook, loggedIn, handleCurrentUserDeletedBook} = useContext(UserContext)
 
-
+    console.log("booksContext", booksData)
+    
     useEffect(() => {
         fetch('/books')
         .then(res => res.json())

@@ -56,11 +56,15 @@ const handleSubmit = (e) => {
       <table>
         <tbody>
           <tr>
-            <td>{currentUser.username}</td>
+            <td>
+              <span style={{fontWeight: "bold"}}>
+                {currentUser.username}
+              </span> 
+            </td>
           </tr>
           <tr>
             <td>
-              comment: 
+                review:
               <input 
                 type='text'
                 onChange={(e) => setNewComment(e.target.value)}

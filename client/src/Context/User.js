@@ -80,8 +80,6 @@ const handleCurrentUserDeletedBook = (delBook) => {
   
 }
 
-console.log("currentUser2", currentUser)
-
   const userValues = {
     currentUser,
     setCurrentUser,

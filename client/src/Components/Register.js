@@ -10,11 +10,13 @@ export default function Register() {
     const [username, setUsername] = useState('')
     const [password, setPassword] =useState('')
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
+    // eslint-disable-next-line
     const [error, setError] = useState(null)
 
 
-    function handleSubmit(e) {
+    function handleRegisterSubmit(e) {
         e.preventDefault()
+        
         const signupValues = {
             first_name: firstName,
             last_name: lastName,
@@ -32,6 +34,11 @@ export default function Register() {
         })
         .then(res=> res.json())
         .then(data => {
+            // setCurrentUser(data)
+            // setLoggedIn(true)
+            // setUsername('')
+            // setPassword('')
+
             if(data.username === username) {
                 setCurrentUser(data)
                 setLoggedIn(true)
@@ -47,7 +54,7 @@ export default function Register() {
 
   return (
     <div className='registerStyle'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleRegisterSubmit}>
       <label style={{fontWeight: "bold", marginLeft: "25%"}}>
             FIRST NAME:
             <input 
@@ -88,7 +95,7 @@ export default function Register() {
             PASSWORD:
             <input 
                 style={{marginLeft: "25%"}}
-                type='text'
+                type='password'
                 value={password}
                 required
                 onChange={(e) => setPassword(e.target.value)}
@@ -100,7 +107,7 @@ export default function Register() {
             RE-ENTER PASSWORD: 
             <input 
                 style={{marginLeft: "25%"}}
-                type='text'
+                type='password'
                 value={passwordConfirmation}
                 required
                 onChange={(e) => setPasswordConfirmation(e.target.value)}

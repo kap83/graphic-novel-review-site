@@ -9,7 +9,7 @@ export default function Login({handleClick}) {
       const [password, setPassword] = useState('')
 
    
-      function handleSubmit(e) {
+      function handleLoginSubmit(e) {
         e.preventDefault()
         const loginValues = {
           username: username,
@@ -49,7 +49,7 @@ export default function Login({handleClick}) {
   return (
     <div className='loginStyle'>
     <h1>{notLoggedInError}</h1>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleLoginSubmit}>
       <label style={{fontWeight: "bold"}}>
         USERNAME:
         <input 
