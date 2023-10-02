@@ -6,10 +6,10 @@ export const BooksContext = React.createContext();
 export function BookProvider({children}) {
     // eslint-disable-next-line
     const [booksData, setBooksData] = useState([])
-    const {handleNewlyReviewedBook, loggedIn, handleCurrentUserDeletedBook} = useContext(UserContext)
+    const {handleNewlyReviewedBook, handleCurrentUserDeletedBook} = useContext(UserContext)
 
     console.log("booksContext", booksData)
-    
+
     useEffect(() => {
         fetch('/books')
         .then(res => res.json())

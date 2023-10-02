@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
 
+   skip_before_action :authorized, only: [:index]
 
     def index
        book = Book.all.order(title: 'asc')
@@ -22,7 +23,6 @@ class BooksController < ApplicationController
       book = find_book
       book.destroy
       head :no_content
-     
     end
 
 private 
