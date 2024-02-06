@@ -1,5 +1,7 @@
 # Graphic Novel Review
 
+Demo: https://youtu.be/HoD-s_CxtoE
+
 This app is for all fans of graphic novels. Find and review your favorite graphic novels and managa. 
 
 Seed data provides mock users, books and reviews. 
