@@ -62,7 +62,7 @@ const {handleAddedBook} = useContext(BooksContext)
             style={{fontWeight: 'bold', textDecoration: 'underline'}}>
               NOTE
               </span>
-              <span style={{fontWeight: 'bold', marginRight: '1px'}}>:
+              <span style={{fontWeight: 'bold', marginRight: '2px'}}>:
               </span> 
                IF THE BOOK ONLY HAS ONE VOLUME
       </p>

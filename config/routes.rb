@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   post "/signup", to: "users#create"
+  get "/get_vol/", to: "books#get_vol"
+ 
 
 
   # route to test your configuration

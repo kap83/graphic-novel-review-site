@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-   skip_before_action :authorized, only: [:index]
+   skip_before_action :authorized, only: [:index, :popular_books, :search_word, :get_vol]
 
     def index
        book = Book.all.order(title: 'asc')
@@ -24,6 +24,9 @@ class BooksController < ApplicationController
       book.destroy
       head :no_content
     end
+
+
+
 
 private 
 

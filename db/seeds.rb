@@ -17,7 +17,9 @@ Book.create(title: "On A Sunbeam", author: "Tillie Walden", artist: "Tillie Wald
 Review.create!(comment: "Fantastic Read! Can't to get my hands on the next one!", book_id: 1, user_id: 1)
 Review.create!(comment: "One of the BEST Superman stories I've ever read! This made me like Superman all over again. Very well written.", book_id: 3, user_id: 2)
 Review.create!(comment: "Great idea. But I don't think it's very well excuted. I'd give it three stars.", book_id: 1, user_id: 2)
-Review.create!(comment: "Scary book", book_id: 8, user_id: 1)
-Review.create!(comment: "Hard being a woman", book_id: 8, user_id: 2)
+Review.create!(comment: "Scary book", book_id: 7, user_id: 1)
+Review.create!(comment: "Hard being a woman", book_id: 7, user_id: 2)
+Review.create!(comment: "Well written. I enjoyed it very much.", book_id: 2, user_id: 1)
+Review.create!(comment: "Could have been written better. But still enjoyable", book_id: 6, user_id: 2)
 
 puts "✅ Done seeding!"

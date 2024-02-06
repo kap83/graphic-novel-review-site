@@ -8,10 +8,10 @@ class UsersController < ApplicationController
         render json: user, status: :created 
     end
 
-    def index 
-        user = User.all
-        render json: user
-    end
+    # def index 
+    #     user = User.all
+    #     render json: user
+    # end
 
     def show 
         user = @current_user
