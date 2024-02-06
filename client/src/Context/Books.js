@@ -4,11 +4,10 @@ import { UserContext } from '../Context/User'
 export const BooksContext = React.createContext();
 
 export function BookProvider({children}) {
-    // eslint-disable-next-line
     const [booksData, setBooksData] = useState([])
     const {handleNewlyReviewedBook, handleCurrentUserDeletedBook} = useContext(UserContext)
 
-    console.log("booksContext", booksData)
+    //console.log("booksContext", booksData)
 
     useEffect(() => {
         fetch('/books')
@@ -21,6 +20,11 @@ export function BookProvider({children}) {
     //works
     const handleAddedBook = (newBook) => {
         const updateBooksData = [...booksData, newBook]
+        updateBooksData.sort((a, b) => {
+            if (a.title < b.title) return -1
+            if (a.title > b.title) return 1
+            return 0
+        })
         setBooksData(updateBooksData)
     }
 
@@ -47,8 +51,6 @@ export function BookProvider({children}) {
         setBooksData(updatedBooksArr)
     }
 
-
-
     
     //works
     const handleEditedReview = (editedReview) => {
@@ -73,6 +75,7 @@ export function BookProvider({children}) {
       setBooksData(updatedBookData)
 
   }
+  
     //works
   const handleNewReview = (newReview) => {
       const updatedBooksData = booksData.map(book => {

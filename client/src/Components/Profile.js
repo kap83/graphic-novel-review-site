@@ -24,7 +24,7 @@ const {currentUser} = useContext(UserContext)
                 src={book.cover_url}  
                 alt={book.title}
                 width={200}
-                height={206}
+                height={207}
                
               />
              </Link>

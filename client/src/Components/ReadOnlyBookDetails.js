@@ -7,6 +7,7 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
   const {handleDeletedBook} = useContext(BooksContext)
   const navigate = useNavigate()
 
+  // eslint-disable-next-line
   const handleDeleteClick = () => {
     fetch(`/books/${parseId}`, {
       method: 'DELETE',
@@ -55,8 +56,8 @@ export default function ReadOnlyBookDetails({handleEditToggleClick, selectedBook
      </tr>
      <tr>
         <td>
-          <button type='button' onClick={handleEditToggleClick}>EDIT</button>
-          <button type='button' onClick={handleDeleteClick}>DELETE</button>
+          {/* <button type='button' onClick={handleEditToggleClick}>EDIT</button> */}
+          {/* <button type='button' onClick={handleDeleteClick}>DELETE</button> */}
         </td>
       </tr>
     </>
